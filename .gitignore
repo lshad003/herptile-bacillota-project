@@ -8,15 +8,18 @@
 !*.sh
 !*.R
 
-# Data, genomes and figures are not committed. This repository records how
-# results were produced; the results themselves remain on the cluster.
+# Data and genomes are not committed. This repository records how results
+# were produced; the results themselves remain on the cluster.
 *.fa
 *.fna
 *.faa
 *.gz
 *.tsv
 *.csv
-*.pdf
-*.png
 *.nwk
 *.gff
+*.png
+
+# Final manuscript figures are committed as PDF, in figures/ only.
+*.pdf
+!figures/*.pdf
