@@ -1,0 +1,22 @@
+# Whitelist. Everything is ignored unless explicitly allowed below.
+*
+
+!*/
+!.gitignore
+!*.md
+!*.py
+!*.sh
+!*.R
+
+# Data, genomes and figures are not committed. This repository records how
+# results were produced; the results themselves remain on the cluster.
+*.fa
+*.fna
+*.faa
+*.gz
+*.tsv
+*.csv
+*.pdf
+*.png
+*.nwk
+*.gff
