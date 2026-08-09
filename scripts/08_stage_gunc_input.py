@@ -1,12 +1,8 @@
 #!/usr/bin/env python3
-# Preparation of protein calls for chimerism screening.
-#
+# Calls proteins with Prodigal for GUNC input.
 # Source: ruminococcaceae-agent/scripts/stage_gunc_input.py
-# Writes: work/gunc_input/
-#
-# GUNC is run on protein calls rather than nucleotide sequence, so Prodigal
-# is run first with -p meta. The same Prodigal version is used throughout the
-# project so that gene calls are comparable between analyses.
+# Output: work/gunc_input/
+
 import os, sys
 
 B = "/bigdata/stajichlab/lshad003/ruminococcaceae-agent"

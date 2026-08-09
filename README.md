@@ -28,12 +28,14 @@ one parsing pipeline for both, so that the two are comparable.
 | `jobs/01_dereplicate_mags.sh` | Dereplication at 95% ANI |
 | `scripts/02_build_sgb_manifest.py` | SGB manifest from the dereplication tables |
 | `jobs/03_rrna_trna_catalog.sh` | barrnap and tRNAscan-SE, catalog arm |
-| `jobs/04_rrna_trna_catalog_resume.sh` | Resume job for the above |
 | `jobs/05_rrna_trna_references.sh` | barrnap and tRNAscan-SE, reference arm |
 | `scripts/06_parse_rrna_trna.py` | Feature parsing, both arms |
 | `jobs/07_gunc_screen_representatives.sh` | Chimerism screening |
 | `scripts/08_stage_gunc_input.py` | Protein calls for the above |
 | `scripts/09_audit_gunc.py` | Chimerism summary |
+| `scripts/10_figure1_catalog.py` | Figure 1 |
+
+Output: `figures/Figure1_catalog.pdf`
 
 ## Software
 

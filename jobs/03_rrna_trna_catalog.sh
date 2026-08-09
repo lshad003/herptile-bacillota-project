@@ -1,23 +1,8 @@
 #!/bin/bash -l
-# Detection of rRNA genes and tRNAs in the 1,171 SGB representatives.
-#
+# barrnap and tRNAscan-SE on the 1,171 SGB representatives.
 # Source: ruminococcaceae-agent/jobs/48_rrna_trna_resume.sh
-# Writes: results/rrna_trna/barrnap/, results/rrna_trna/trnascan/
-#
-# The screen runs as a 59-task array over the representatives in chunks of
-# twenty. It was submitted in two parts: an earlier submission covered the
-# first chunk only, and this job covers the remaining fifty-eight. Both write
-# into the same output directories, and per-genome guards make a rerun of a
-# finished genome a no-op. Completeness was confirmed by counting output
-# files rather than by job exit state.
-#
-# barrnap writes a GFF containing only a version header when nothing is
-# found. Such a file is non-empty, so presence is determined by counting
-# feature lines by rRNA type rather than by testing whether the file exists.
-#
-# The barrnap and tRNAscan-SE modules load miniconda3, which fails in a batch
-# shell, so both are called by absolute path with PATH and PERL5LIB set
-# explicitly.
+# Output: results/rrna_trna/{barrnap,trnascan}/
+
 # RRNA_TRNA_V3_20260805
 #SBATCH --job-name=rrna_trna
 #SBATCH --partition=intel

@@ -1,15 +1,9 @@
 #!/bin/bash -l
-# Detection of rRNA genes and tRNAs in 1,247 GTDB r220 Ruminococcaceae
-# reference genomes.
-#
+# barrnap and tRNAscan-SE on 1,247 GTDB r220 Ruminococcaceae references.
+# Same settings as the catalog arm, so recovery rates are comparable.
 # Source: ruminococcaceae-agent/jobs/51_rrna_trna_refs.sh
-# Writes: results/rrna_trna_refs/barrnap/, results/rrna_trna_refs/trnascan/
-#
-# The reference arm is processed with the same tools and settings as the
-# catalog arm so that recovery rates are comparable between them. One
-# reference genome failed to parse and is recorded in
-# results/rrna_trna_refs_missing.txt; the reference denominator is therefore
-# 1,246 rather than 1,247.
+# Output: results/rrna_trna_refs/{barrnap,trnascan}/
+
 # RRNA_TRNA_REFS_V1_20260806
 #SBATCH --job-name=rt_refs
 #SBATCH --partition=intel

@@ -1,18 +1,8 @@
 #!/usr/bin/env python3
-# Construction of the species-level genome bin (SGB) manifest.
-#
-# Source: ruminococcaceae-agent/scripts/build_sgb_manifest.py (V2, 2026-08-03)
-# Reads:  results/drep_herptile_95ani_2229/data_tables/Cdb.csv  (cluster membership)
-#         results/drep_herptile_95ani_2229/data_tables/Wdb.csv  (dRep representatives)
-#         data/herptile_bacillota_A_HQ_manifest_with_source.tsv (2,229 MAGs)
-# Writes: data/sgb_manifest.tsv  (1,171 rows, one per SGB)
-#
-# Cluster identity is taken from the secondary_cluster field, so SGB
-# identifiers are dRep's own and remain stable if the input set is filtered.
-# Representatives are taken from Wdb.csv where available. Where a cluster has
-# no recorded winner, a representative is chosen by completeness minus five
-# times contamination; this is a simplification of dRep's scoring function,
-# which also weights N50 and centrality.
+# Builds the SGB manifest from the dRep cluster tables.
+# Source: ruminococcaceae-agent/scripts/build_sgb_manifest.py
+# Output: data/sgb_manifest.tsv
+
 import os, sys
 from collections import defaultdict, Counter
 

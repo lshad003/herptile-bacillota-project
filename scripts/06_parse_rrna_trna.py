@@ -1,26 +1,12 @@
 #!/usr/bin/env python3
-# Parsing of barrnap and tRNAscan-SE output for both arms.
-#
+# Parses barrnap and tRNAscan-SE output for the catalog and reference arms.
 # Source: ruminococcaceae-agent/scripts/parse_rrna_trna_both_arms.py
-# Reads:  results/rrna_trna/ (1,171 SGB representatives)
-#         results/rrna_trna_refs/ (1,246 GTDB r220 references)
-# Writes: results/rrna_trna_catalog_per_genome_merged.tsv
+# Output: results/rrna_trna_catalog_per_genome_merged.tsv
 #         results/rrna_trna_refs_per_genome.tsv
 #
-# Both arms are parsed by one code path so that detection criteria cannot
-# differ between them.
-#
-# tRNA isotypes are counted by amino acid. Ile2 is counted as isoleucine and
-# fMet and iMet as methionine, since these are isoacceptors of standard amino
-# acids. SeC, suppressor and undetermined tRNAs are excluded from the
-# twenty-amino-acid count. An earlier parser,
-# ruminococcaceae-agent/scripts/parse_rrna_trna.py, matched isotype names
-# against a whitelist of the twenty canonical three-letter abbreviations,
-# which discards Ile2 and fMet and understates tRNA coverage; its output
-# should not be used.
-#
-# The catalog-arm output block was added on 2026-08-08. The original script
-# summarised both arms but wrote only the reference arm to disk.
+# tRNA isotypes are counted by amino acid: Ile2 counts as isoleucine, fMet
+# and iMet as methionine. SeC, suppressor and undetermined tRNAs are excluded.
+
 import os, sys, csv
 from collections import Counter, defaultdict
 

@@ -1,21 +1,12 @@
 #!/usr/bin/env python3
-# Summary of chimerism screening across the SGB representatives.
-#
+# Summarises GUNC output across the SGB representatives.
 # Source: ruminococcaceae-agent/scripts/gunc_audit.py
-# Reads:  results/gunc_sgb/GUNC.progenomes_2.1.maxCSS_level.tsv
-#         data/sgb_manifest.tsv
-# Writes: results/gunc_audit_by_sgb.tsv
+# Output: results/gunc_audit_by_sgb.tsv
 #
-# Two thresholds are applied. The first is GUNC's own pass criterion at a
-# clade separation score of 0.45. The second is a study-defined criterion
-# requiring a clade separation score of at least 0.85, a reference
-# representation score of at least 0.5, and a maximum contamination signal at
-# family level or above.
-#
-# Reference representation scores are low across this catalog, with a median
-# of 0.48, so detection is conservative. Results are reported as no chimerism
-# detected under limited reference representation rather than as no chimerism
-# present.
+# Two criteria are applied: GUNC's own pass threshold (CSS 0.45), and a
+# study-defined criterion of CSS >= 0.85, reference representation >= 0.5,
+# and maximum contamination at family level or above.
+
 import os, sys
 from collections import Counter, defaultdict
 import numpy as np

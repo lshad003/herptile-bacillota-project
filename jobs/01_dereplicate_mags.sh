@@ -1,17 +1,8 @@
 #!/bin/bash -l
-# Dereplication of 2,229 Bacillota_A MAGs into species-level genome bins.
-#
+# Dereplication of Bacillota_A MAGs at 95% ANI into species-level genome bins.
 # Source: ruminococcaceae-agent/scripts/drep_rerun_2229.sh
-# Run:    2026-07-23
 # Output: results/drep_herptile_95ani_2229/
-#
-# Parameters were confirmed against dRep's own record of the executed run,
-# results/drep_herptile_95ani_2229/log/cluster_arguments.json. An earlier
-# script, jobs/14_drep_herptile.sh, writes to a different output directory
-# and does not correspond to the run reported in the manuscript.
-#
-# Representatives are selected by dRep using completeness weight 1,
-# contamination weight 5, N50 weight 0.5 and centrality weight 1.
+
 #SBATCH --job-name=drep2229
 #SBATCH --partition=epyc
 #SBATCH --time=3-00:00:00

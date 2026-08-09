@@ -1,16 +1,8 @@
 #!/bin/bash -l
-# Chimerism screening of the SGB representatives against proGenomes 2.1.
-#
+# GUNC chimerism screening of the SGB representatives against proGenomes 2.1.
 # Source: ruminococcaceae-agent/jobs/24_gunc_sgb.sh
-# Writes: results/gunc_sgb/
-#
-# GUNC 1.0.6 pins DIAMOND to version 2.0.4 and ships that binary in its own
-# module. Loading the diamond module places a later version ahead of it on
-# PATH and GUNC aborts.
-#
-# Two SGBs whose representatives were replaced after exclusion of the
-# laboratory-reared arm were screened separately; see
-# jobs/09_screen_replacement_representatives.sh.
+# Output: results/gunc_sgb/
+
 #SBATCH --job-name=gunc_sgb
 #SBATCH --output=/bigdata/stajichlab/lshad003/ruminococcaceae-agent/logs/gunc_sgb_%j.out
 #SBATCH --error=/bigdata/stajichlab/lshad003/ruminococcaceae-agent/logs/gunc_sgb_%j.err
