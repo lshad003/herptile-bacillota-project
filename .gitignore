@@ -23,3 +23,6 @@
 # Final manuscript figures are committed as PDF, in figures/ only.
 *.pdf
 !figures/*.pdf
+
+# Supplementary tables are committed, in tables/ only.
+!tables/*.tsv

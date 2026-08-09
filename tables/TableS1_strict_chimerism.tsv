@@ -1,0 +1,8 @@
+genome	sgb	family	genus	taxonomic_level	clade_separation_score	reference_representation_score	checkm_completeness	checkm_contamination	n_contigs	pass_gunc
+UHM31.35748_R.bin.13	221_0	Lachnospiraceae	Muricomes	order	0.980	0.600	83.87	3.88	999	FAIL
+STP572.12604_R.bin.79	296_0	Lachnospiraceae	UNASSIGNED	phylum	0.950	0.590	97.70	1.54	165	FAIL
+UHM973.23044_R.bin.46	160_0	Lachnospiraceae	UNASSIGNED	phylum	0.950	0.550	95.30	2.91	315	FAIL
+STP672.12605_R.bin.31	332_0	Lachnospiraceae	Fimimorpha	phylum	0.920	0.600	92.41	2.74	163	FAIL
+UHM982.23046_R.bin.107	439_1	Lachnospiraceae	Velocimicrobium	phylum	0.880	0.560	97.99	0.22	221	FAIL
+UHM904.23055_R.bin.1	402_1	Lachnospiraceae	JAQVHQ01	phylum	0.860	0.600	95.57	2.80	106	FAIL
+UHM969.23061_R.bin.78	217_2	Lachnospiraceae	Muricomes	phylum	0.850	0.660	84.18	6.65	669	FAIL

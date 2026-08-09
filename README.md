@@ -6,8 +6,8 @@ metagenomes.
 
 Scripts are copied from the working repository, `ruminococcaceae-agent`, and
 only those that produced reported results are included here. Each file records
-its original path, what it reads, and what it writes. Data, genomes and
-intermediate tables are not committed; they remain on the UCR HPCC cluster.
+its original path, what it reads, and what it writes. Genomes and intermediate
+data are not committed; they remain on the UCR HPCC cluster.
 
 Paths inside the scripts point at the working repository and are left
 unchanged, so that a file here can be compared directly against the version
@@ -34,8 +34,9 @@ one parsing pipeline for both, so that the two are comparable.
 | `scripts/08_stage_gunc_input.py` | Protein calls for the above |
 | `scripts/09_audit_gunc.py` | Chimerism summary |
 | `scripts/10_figure1_catalog.py` | Figure 1 |
+| `scripts/11_make_step1_tables.py` | Supplementary tables S1 to S3 |
 
-Output: `figures/Figure1_catalog.pdf`
+Output: `figures/Figure1_catalog.pdf`, `tables/TableS1` to `TableS3`
 
 ## Software
 
@@ -49,5 +50,6 @@ barrnap 0.9, tRNAscan-SE 2.0.12, happi (R).
     jobs/      SLURM submission scripts
     scripts/   analysis code
     figures/   final manuscript figures
+    tables/    supplementary tables
     config/    input lists and batch files
     docs/      extended notes

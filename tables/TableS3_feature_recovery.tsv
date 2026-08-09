@@ -1,0 +1,4 @@
+arm	n_rrna	n_trna	pct_5S	pct_16S	pct_23S	pct_all_three	pct_trna	pct_both
+Catalog, all SGB representatives	1171	1171	50.5	2.9	1.0	0.4	49.8	0.3
+Catalog, Ruminococcaceae	274	274	60.2	1.8	0.4	0.0	47.1	0.0
+GTDB r220 Ruminococcaceae references	1247	1246	52.4	9.0	7.3	6.4	49.7	6.4
