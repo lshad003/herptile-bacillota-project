@@ -1,36 +1,47 @@
 #!/bin/bash -l
 # Detection of rRNA genes and tRNAs in the 1,171 SGB representatives.
 #
-# Source: ruminococcaceae-agent/jobs/45_rrna_trna.sh
-# Note:   a resume job, jobs/48_rrna_trna_resume.sh, was run afterwards to
-#         cover tasks that did not complete in the first submission. Both
-#         write into the same output directories.
+# Source: ruminococcaceae-agent/jobs/48_rrna_trna_resume.sh
 # Writes: results/rrna_trna/barrnap/, results/rrna_trna/trnascan/
+#
+# The screen runs as a 59-task array over the representatives in chunks of
+# twenty. It was submitted in two parts: an earlier submission covered the
+# first chunk only, and this job covers the remaining fifty-eight. Both write
+# into the same output directories, and per-genome guards make a rerun of a
+# finished genome a no-op. Completeness was confirmed by counting output
+# files rather than by job exit state.
 #
 # barrnap writes a GFF containing only a version header when nothing is
 # found. Such a file is non-empty, so presence is determined by counting
 # feature lines by rRNA type rather than by testing whether the file exists.
-# RRNA_TRNA_V2_20260805
+#
+# The barrnap and tRNAscan-SE modules load miniconda3, which fails in a batch
+# shell, so both are called by absolute path with PATH and PERL5LIB set
+# explicitly.
+# RRNA_TRNA_V3_20260805
 #SBATCH --job-name=rrna_trna
-#SBATCH --partition=short
-#SBATCH --time=01:45:00
+#SBATCH --partition=intel
+#SBATCH --time=04:00:00
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=8G
-#SBATCH --array=0-58%30
+#SBATCH --array=1-58%30
 #SBATCH --output=/bigdata/stajichlab/lshad003/ruminococcaceae-agent/logs/rrna_trna_%A_%a.out
 #SBATCH --error=/bigdata/stajichlab/lshad003/ruminococcaceae-agent/logs/rrna_trna_%A_%a.err
 
-# V1 (27245223, 27245225) failed on every task in 2-4 seconds: the
-# barrnap/0.9 module does `module load miniconda3`, which fails in a batch
-# shell the same way dRep did in job 27148950. Both binaries are now called
-# by absolute path. trnascan-se only prepends PATH and would have worked
-# either way, but is resolved too for consistency.
+# V2 (27245543) ran task 0 ONLY, covering genomes 1-20 of 1,171. It
+# completed cleanly in 01:12:04, so the logic and the chunk size are sound;
+# tasks 1-58 were never submitted. This resumes them.
 #
-# CHATINDEX R1 forbids "MIMAG high quality" because MIMAG also requires 5S,
-# 16S and 23S rRNA plus tRNAs for at least 18 of 20 amino acids, never
-# checked. This covers the 1,171 SGB representatives. The 49.3%
-# near-complete figure in Results 3.1 is per-MAG across all 2,229 and would
-# need a second run on that set to use MIMAG language.
+# CHUNK stays at 20 so the task-index-to-genome mapping matches the
+# completed task 0. The per-genome guards make a rerun of any finished
+# genome a no-op, but task 0 is excluded anyway.
+#
+# Partition moved off short: 01:12:04 against a 01:45:00 cap left no room
+# for a larger-than-average genome.
+#
+# barrnap/0.9 and trnascan-se modules load miniconda3, which fails in a
+# batch shell. Both are called by absolute path and PATH is set explicitly
+# so nothing depends on the submitting shell.
 
 ROOT=/bigdata/stajichlab/lshad003/ruminococcaceae-agent
 GDIR=$ROOT/results/drep_herptile_95ani_2229/dereplicated_genomes
@@ -89,3 +100,4 @@ if [ $NB -eq 0 ] || [ $NT -eq 0 ]; then
 fi
 echo "end   : $(date)"
 echo "RRNA_TRNA_FINISHED task $SLURM_ARRAY_TASK_ID"
+# SENTINEL_END
