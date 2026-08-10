@@ -90,6 +90,25 @@ missing from a small catalog may reflect sampling rather than absence.
 
 Output: `figures/Figure3_cross_catalog_overlap.pdf`, `tables/TableS6`
 
+### Step 4. Read profiling against genome recovery
+
+Genus-level read classifications from the wild samples are compared against the
+genomes recovered from the same material. Because GTDB and NCBI genus names do
+not correspond one to one, the comparison is restricted to genera whose names
+map reciprocally between the two taxonomies, and genera failing that criterion
+are reported as untestable rather than as undetected.
+
+| File | Purpose |
+|---|---|
+| `scripts/38_gtdb_ncbi_genus_map.py` | GTDB genera mapped onto NCBI names |
+| `scripts/39_gtdb_ncbi_reciprocal.py` | Reciprocal filter at 70 percent |
+| `scripts/40_bracken_wild_bacillota.py` | Read profiles summarised by phylum and genus |
+| `scripts/41_bracken_reciprocal_join.py` | Reads joined to genome recovery |
+| `scripts/42_figure_reads_vs_genomes.py` | Reads versus genomes figure |
+| `scripts/43_make_step4_table.py` | Supplementary table S7 |
+
+Output: `figures/Figure_reads_vs_genomes.pdf`, `tables/TableS7`
+
 
 ## Software
 
