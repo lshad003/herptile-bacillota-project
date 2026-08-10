@@ -59,8 +59,9 @@ directly rather than inferred from taxonomy.
 | `jobs/22_pooled_drep_rum.sh` | Joint dereplication of five arms at 95% ANI |
 | `scripts/23_pooled_drep_multiarm_audit.py` | Cluster composition by arm |
 | `scripts/24_figure2_novelty.py` | Figure 2 and the genus-expansion permutation |
+| `scripts/25_make_step2_tables.py` | Supplementary tables S4 and S5 |
 
-Output: `figures/Figure2_novelty_expansion.pdf`
+Output: `figures/Figure2_novelty_expansion.pdf`, `tables/TableS4`, `tables/TableS5`
 
 ## Software
 
