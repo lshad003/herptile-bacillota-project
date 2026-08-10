@@ -1,0 +1,139 @@
+gtdb_genus	gtdb_family	in_wild_catalog	best_ncbi_genus	forward_share	reverse_share	testability_t70	bucket	n_wild_samples_detected	mean_fraction_wild	max_fraction_wild	wild_sgbs	captive_sgbs
+Acetatifactor	Lachnospiraceae	yes	Acetatifactor	0.959	0.992	reciprocal	wild_genome_no_reads	0	0.00000000	0.00000000	4	1
+Acetobacterium	Eubacteriaceae	yes	Acetobacterium	1.000	1.000	reciprocal	reads_and_wild_genome	44	0.00046659	0.00114000	2	0
+Acutalibacter	Acutalibacteraceae	yes	Acutalibacter	0.758	0.980	reciprocal	reads_and_wild_genome	44	0.00053182	0.00119000	4	1
+Agathobaculum	Butyricicoccaceae	yes	Butyricicoccus	0.498	0.445	both_directions_fail	not_testable					
+Alitiscatomonas	Lachnospiraceae	yes	Clostridium	0.792	0.003	ncbi_name_is_shared	not_testable					
+Aminipila	Anaerovoracaceae	yes	Aminipila	0.909	1.000	reciprocal	reads_and_wild_genome	44	0.00085545	0.00248000	3	0
+Anaeromassilibacillus	Acutalibacteraceae	yes	Anaeromassilibacillus	0.938	0.476	ncbi_name_is_shared	not_testable					
+Anaerostipes	Lachnospiraceae	no	Anaerostipes	0.989	0.940	reciprocal	reads_and_captive_genome_only	44	0.00133318	0.00448000	0	1
+Anaerotignum	Anaerotignaceae	yes	Anaerotignum	0.925	0.209	ncbi_name_is_shared	not_testable					
+Anaerotruncus	Ruminococcaceae	yes	Anaerotruncus	0.995	0.822	reciprocal	reads_and_wild_genome	44	0.00168818	0.00401000	42	1
+Anaerovorax	Anaerovoracaceae	yes	Anaerovorax	1.000	0.286	ncbi_name_is_shared	not_testable					
+Angelakisella	Ruminococcaceae	yes	Angelakisella	0.964	1.000	reciprocal	wild_genome_no_reads	0	0.00000000	0.00000000	21	3
+Avispirillum	CAG-272	no	Avispirillum	1.000	1.000	reciprocal	captive_genome_no_reads	0	0.00000000	0.00000000	0	2
+Bacilliculturomica	Anaerovoracaceae	yes	Bacilliculturomica	1.000	1.000	reciprocal	wild_genome_no_reads	0	0.00000000	0.00000000	3	0
+Bariatricus	Lachnospiraceae	yes	Coprococcus	0.836	0.305	ncbi_name_is_shared	not_testable					
+Blautia	Lachnospiraceae	yes	Blautia	0.996	0.204	ncbi_name_is_shared	not_testable					
+Blautia_A	Lachnospiraceae	yes	Blautia	0.824	0.694	ncbi_name_is_shared	not_testable					
+Brotaphodocola	Lachnospiraceae	yes	Clostridium	0.754	0.008	ncbi_name_is_shared	not_testable					
+Butyribacter	Lachnospiraceae	yes	Lachnoclostridium	0.504	0.116	both_directions_fail	not_testable					
+CABSEG01		yes		0.000	0.000	not_in_gtdb	not_testable					
+CAG-1782	DTU072	yes	Christensenella	0.889	0.008	ncbi_name_is_shared	not_testable					
+CAG-269	CAG-508	yes	Clostridium	0.996	0.045	ncbi_name_is_shared	not_testable					
+CAG-465	CAG-465	yes	Clostridium	1.000	0.006	ncbi_name_is_shared	not_testable					
+CAKRRK01		yes		0.000	0.000	not_in_gtdb	not_testable					
+CALWZE01		yes		0.000	0.000	not_in_gtdb	not_testable					
+CALWZU01		yes		0.000	0.000	not_in_gtdb	not_testable					
+CALXDZ01		yes		0.000	0.000	not_in_gtdb	not_testable					
+CALXEM01	Ruminococcaceae	yes	Marvinbryantia	1.000	0.036	ncbi_name_is_shared	not_testable					
+CAMMKL01		yes		0.000	0.000	not_in_gtdb	not_testable					
+CAQBRY01		yes		0.000	0.000	not_in_gtdb	not_testable					
+CATJNN01		yes		0.000	0.000	not_in_gtdb	not_testable					
+CHH4-2	Lachnospiraceae	yes	Clostridium	1.000	0.000	ncbi_name_is_shared	not_testable					
+Caproicibacterium	Acutalibacteraceae	yes	Caproicibacterium	1.000	1.000	reciprocal	reads_and_wild_genome	44	0.00119932	0.00303000	1	1
+Christensenella	Christensenellaceae	yes	Christensenella	1.000	0.036	ncbi_name_is_shared	not_testable					
+Clostridium	Clostridiaceae	yes	Clostridium	0.997	0.235	ncbi_name_is_shared	not_testable					
+Dysosmobacter		yes		0.000	0.000	not_in_gtdb	not_testable					
+Eisenbergiella	Lachnospiraceae	yes	Eisenbergiella	0.905	0.728	reciprocal	reads_and_wild_genome	44	0.00110341	0.00537000	3	1
+Emergencia	Anaerovoracaceae	yes	Emergencia	0.712	1.000	reciprocal	reads_and_wild_genome	44	0.00052136	0.00170000	3	2
+Enterocloster	Lachnospiraceae	yes	Enterocloster	0.734	0.985	reciprocal	reads_and_wild_genome	44	0.00421295	0.02854000	4	1
+Eubacterium	Eubacteriaceae	yes	Eubacterium	0.974	0.031	ncbi_name_is_shared	not_testable					
+Evtepia	Oscillospiraceae	yes	Evtepia	0.766	0.923	reciprocal	wild_genome_no_reads	0	0.00000000	0.00000000	10	0
+Extibacter	Lachnospiraceae	yes	Lachnoclostridium	0.412	0.013	both_directions_fail	not_testable					
+Faecalibacterium	Ruminococcaceae	no	Faecalibacterium	0.973	0.897	reciprocal	reads_and_captive_genome_only	44	0.00323091	0.00695000	0	2
+Faecalimonas	Lachnospiraceae	yes	Faecalimonas	0.442	0.974	forward_ambiguous	not_testable					
+Faecivivens	Ruminococcaceae	no	Faecivivens	1.000	1.000	reciprocal	captive_genome_no_reads	0	0.00000000	0.00000000	0	1
+Faecousia	Oscillospiraceae	no	Faecousia	0.891	1.000	reciprocal	captive_genome_no_reads	0	0.00000000	0.00000000	0	5
+Fimadaptatus	Aristaeellaceae	no	Fimadaptatus	1.000	1.000	reciprocal	captive_genome_no_reads	0	0.00000000	0.00000000	0	1
+Fimenecus	Acutalibacteraceae	yes	Ruminococcus	0.352	0.007	both_directions_fail	not_testable					
+Fimimorpha	Lachnospiraceae	yes	Fimimorpha	1.000	1.000	reciprocal	wild_genome_no_reads	0	0.00000000	0.00000000	1	0
+Fimivivens	Ruminococcaceae	yes	Fimivivens	0.833	0.833	reciprocal	wild_genome_no_reads	0	0.00000000	0.00000000	7	1
+Fournierella	Ruminococcaceae	yes	Fournierella	0.741	0.976	reciprocal	wild_genome_no_reads	0	0.00000000	0.00000000	1	0
+Harryflintia	Ruminococcaceae	yes	Harryflintia	0.500	1.000	forward_ambiguous	not_testable					
+Hespellia	Lachnospiraceae	no	Hespellia	1.000	0.800	reciprocal	captive_genome_no_reads	0	0.00000000	0.00000000	0	4
+Hominibacterium	Anaerovoracaceae	yes	Hominibacterium	0.200	1.000	forward_ambiguous	not_testable					
+Howiella	Acutalibacteraceae	yes	Howiella	1.000	1.000	reciprocal	wild_genome_no_reads	0	0.00000000	0.00000000	1	3
+Hungatella	Lachnospiraceae	yes	Hungatella	0.982	0.111	ncbi_name_is_shared	not_testable					
+Hungatella_A	Lachnospiraceae	yes	Hungatella	0.857	0.025	ncbi_name_is_shared	not_testable					
+Hydrogeniiclostridium	Acutalibacteraceae	yes	Hydrogeniiclostridium	0.600	0.750	forward_ambiguous	not_testable					
+Hydrogenoanaerobacterium	Ruminococcaceae	yes	Hydrogenoanaerobacterium	1.000	0.136	ncbi_name_is_shared	not_testable					
+IOR16	Anaerovoracaceae	yes	Anaerovorax	0.750	0.429	ncbi_name_is_shared	not_testable					
+Intestinibacillus	Butyricicoccaceae	yes	Intestinibacillus	1.000	0.714	reciprocal	reads_and_wild_genome	44	0.00024045	0.00082000	6	1
+Intestinimonas	Oscillospiraceae	yes	Intestinimonas	0.956	0.945	reciprocal	reads_and_wild_genome	44	0.00277841	0.01207000	14	0
+JAAWBF01		yes		0.000	0.000	not_in_gtdb	not_testable					
+JAAYCI01		yes		0.000	0.000	not_in_gtdb	not_testable					
+JAAYNV01		yes		0.000	0.000	not_in_gtdb	not_testable					
+JAAYQI01	Anaerotignaceae	yes	Epulonipiscium	1.000	0.042	ncbi_name_is_shared	not_testable					
+JAEWRY01		yes		0.000	0.000	not_in_gtdb	not_testable					
+JAEWYE01		yes		0.000	0.000	not_in_gtdb	not_testable					
+JAEXFV01		yes		0.000	0.000	not_in_gtdb	not_testable					
+JAGOGN01		yes		0.000	0.000	not_in_gtdb	not_testable					
+JAGPHI01		yes		0.000	0.000	not_in_gtdb	not_testable					
+JAHHSE01		yes		0.000	0.000	not_in_gtdb	not_testable					
+JAHHTP01		yes		0.000	0.000	not_in_gtdb	not_testable					
+JAIHAL01		yes		0.000	0.000	not_in_gtdb	not_testable					
+JAISYX01		yes		0.000	0.000	not_in_gtdb	not_testable					
+JALFVM01		yes		0.000	0.000	not_in_gtdb	not_testable					
+JAUNTE01		yes		0.000	0.000	not_in_gtdb	not_testable					
+Kineothrix	Lachnospiraceae	yes	Kineothrix	1.000	0.999	reciprocal	reads_and_wild_genome	44	0.00141500	0.00402000	6	1
+Lachnoclostridium_A	Lachnospiraceae	yes	Lachnoclostridium	0.951	0.070	ncbi_name_is_shared	not_testable					
+Lachnoclostridium_B		yes		0.000	0.000	not_in_gtdb	not_testable					
+Lacrimispora	Lachnospiraceae	yes	Lacrimispora	0.579	0.629	both_directions_fail	not_testable					
+Lactonifactor	Lachnospiraceae	yes	Lactonifactor	1.000	1.000	reciprocal	reads_and_wild_genome	44	0.00059023	0.00425000	2	0
+Lawsonibacter	Oscillospiraceae	yes	Lawsonibacter	0.377	0.788	forward_ambiguous	not_testable					
+Limiplasma	Aristaeellaceae	yes	Limiplasma	0.971	0.971	reciprocal	wild_genome_no_reads	0	0.00000000	0.00000000	3	13
+Limivicinus	Oscillospiraceae	no	Limivicinus	0.857	1.000	reciprocal	captive_genome_no_reads	0	0.00000000	0.00000000	0	5
+MGBC124762		yes		0.000	0.000	not_in_gtdb	not_testable					
+MGBC140009		yes		0.000	0.000	not_in_gtdb	not_testable					
+MGBC143606		yes		0.000	0.000	not_in_gtdb	not_testable					
+Massiliimalia	Ruminococcaceae	yes	Massiliimalia	0.667	1.000	forward_ambiguous	not_testable					
+Massilioclostridium	Ruminococcaceae	yes	Massilioclostridium	0.833	1.000	reciprocal	wild_genome_no_reads	0	0.00000000	0.00000000	3	0
+Merdicola	CAG-508	yes	Clostridium	0.962	0.008	ncbi_name_is_shared	not_testable					
+Merdimmobilis	Ruminococcaceae	yes	Merdimmobilis	0.875	0.875	reciprocal	wild_genome_no_reads	0	0.00000000	0.00000000	2	0
+Mobilisporobacter	Lachnospiraceae	yes	Mobilisporobacter	1.000	0.500	ncbi_name_is_shared	not_testable					
+Monoglobus	Monoglobaceae	no	Monoglobus	1.000	0.938	reciprocal	reads_and_captive_genome_only	44	0.00022818	0.00077000	0	1
+Muricomes	Lachnospiraceae	yes	Muricomes	0.643	0.692	both_directions_fail	not_testable					
+Negativibacillus	Ruminococcaceae	yes	Negativibacillus	0.500	1.000	forward_ambiguous	not_testable					
+Novisyntrophococcus	Lachnospiraceae	yes	Eubacterium	0.571	0.002	both_directions_fail	not_testable					
+Oliverpabstia	Lachnospiraceae	yes	Blautia	0.592	0.046	both_directions_fail	not_testable					
+Onthocola_A	Lachnospiraceae	yes	Onthocola	1.000	0.429	ncbi_name_is_shared	not_testable					
+Onthomonas	Oscillospiraceae	no	Onthomonas	0.833	1.000	reciprocal	captive_genome_no_reads	0	0.00000000	0.00000000	0	1
+Oscillibacter	Oscillospiraceae	yes	Oscillibacter	0.850	0.803	reciprocal	reads_and_wild_genome	44	0.00218545	0.00550000	2	0
+Otoolea	Lachnospiraceae	yes	Clostridium	0.640	0.034	both_directions_fail	not_testable					
+Parachristensenella	UMGS416	no	Parachristensenella	1.000	1.000	reciprocal	captive_genome_no_reads	0	0.00000000	0.00000000	0	1
+Pelethousia	CAG-138	no	Pelethousia	0.800	1.000	reciprocal	captive_genome_no_reads	0	0.00000000	0.00000000	0	2
+Petralouisia	Lachnospiraceae	yes	Eubacterium	0.912	0.013	ncbi_name_is_shared	not_testable					
+Protoclostridium	Pumilibacteraceae	yes	Protoclostridium	1.000	1.000	reciprocal	wild_genome_no_reads	0	0.00000000	0.00000000	2	0
+Pseudoflavonifractor	Oscillospiraceae	yes	Pseudoflavonifractor	0.868	0.284	ncbi_name_is_shared	not_testable					
+Pygmaiobacter	Ruminococcaceae	no	Pygmaiobacter	0.867	1.000	reciprocal	captive_genome_no_reads	0	0.00000000	0.00000000	0	1
+RACS-047		yes		0.000	0.000	not_in_gtdb	not_testable					
+RGIG3102		yes		0.000	0.000	not_in_gtdb	not_testable					
+RGIG4733		yes		0.000	0.000	not_in_gtdb	not_testable					
+RGIG5057		yes		0.000	0.000	not_in_gtdb	not_testable					
+RGIG7389		yes		0.000	0.000	not_in_gtdb	not_testable					
+RGIG8482	CAG-508	yes	Clostridium	1.000	0.004	ncbi_name_is_shared	not_testable					
+Robinsoniella	Lachnospiraceae	yes	Robinsoniella	1.000	0.696	ncbi_name_is_shared	not_testable					
+Roseburia	Lachnospiraceae	yes	Roseburia	0.960	0.427	ncbi_name_is_shared	not_testable					
+Ruminiclostridium_E	Ruminococcaceae	no	Ruminiclostridium	0.895	0.824	reciprocal	reads_and_captive_genome_only	44	0.00037955	0.00081000	0	2
+Ruthenibacterium	Ruminococcaceae	yes	Ruthenibacterium	0.862	0.978	reciprocal	reads_and_wild_genome	44	0.00147614	0.00366000	16	3
+SIG603	Acutalibacteraceae	yes	Bacteroides	0.231	0.000	both_directions_fail	not_testable					
+SZUA-378		yes		0.000	0.000	not_in_gtdb	not_testable					
+Scatomorpha	Oscillospiraceae	yes	Scatomorpha	0.960	0.960	reciprocal	wild_genome_no_reads	0	0.00000000	0.00000000	1	2
+Soleaferrea	Ruminococcaceae	yes	Soleaferrea	1.000	0.333	ncbi_name_is_shared	not_testable					
+Stercoripulliclostridium	DTU072	yes	Stercoripulliclostridium	1.000	0.333	ncbi_name_is_shared	not_testable					
+Suilimivivens	Lachnospiraceae	yes	Clostridium	0.412	0.002	both_directions_fail	not_testable					
+UBA2658		yes		0.000	0.000	not_in_gtdb	not_testable					
+UBA6857	Acutalibacteraceae	yes	Ruminococcus	0.750	0.001	ncbi_name_is_shared	not_testable					
+UBA866		yes		0.000	0.000	not_in_gtdb	not_testable					
+UBA9414	Lachnospiraceae	yes	Coprococcus	0.500	0.002	both_directions_fail	not_testable					
+UMGS1071	Acutalibacteraceae	yes	Clostridium	0.500	0.000	both_directions_fail	not_testable					
+UMGS1251		yes		0.000	0.000	not_in_gtdb	not_testable					
+UMGS1279		yes		0.000	0.000	not_in_gtdb	not_testable					
+UMGS1663	CAG-508	yes	Clostridium	1.000	0.001	ncbi_name_is_shared	not_testable					
+UMGS856		yes		0.000	0.000	not_in_gtdb	not_testable					
+Velocimicrobium	Lachnospiraceae	yes	Acetivibrio	0.769	0.217	ncbi_name_is_shared	not_testable					
+Ventricola	Aristaeellaceae	no	Ventricola	0.750	1.000	reciprocal	captive_genome_no_reads	0	0.00000000	0.00000000	0	2
+Ventrisoma	Lachnospiraceae	yes	Ventrisoma	0.500	1.000	forward_ambiguous	not_testable					
+Vermiculatibacterium	Oscillospiraceae	yes	Pseudoflavonifractor	0.971	0.293	ncbi_name_is_shared	not_testable					
+WRAV01		yes		0.000	0.000	not_in_gtdb	not_testable					
