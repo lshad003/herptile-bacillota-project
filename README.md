@@ -4,14 +4,10 @@ Code and job scripts behind a comparative genomics study of Bacillota_A
 metagenome-assembled genomes recovered from reptile and amphibian gut
 metagenomes.
 
-Scripts are copied from the working repository, `ruminococcaceae-agent`, and
-only those that produced reported results are included here. Each file records
-its original path, what it reads, and what it writes. Genomes and intermediate
-data are not committed; they remain on the UCR HPCC cluster.
-
-Paths inside the scripts point at the working repository and are left
-unchanged, so that a file here can be compared directly against the version
-that was run.
+Paths inside the scripts point at the working repository, `ruminococcaceae-agent`,
+and are left unchanged, so that a file here can be compared directly against the
+version that was run. Genomes and intermediate data are not committed; they
+remain on the UCR HPCC cluster.
 
 ## Steps
 
@@ -37,6 +33,34 @@ one parsing pipeline for both, so that the two are comparable.
 | `scripts/11_make_step1_tables.py` | Supplementary tables S1 to S3 |
 
 Output: `figures/Figure1_catalog.pdf`, `tables/TableS1` to `TableS3`
+
+### Step 2. Novelty against GTDB r220
+
+Representatives of the wild species-level genome bins are classified against
+GTDB r220 to establish how many fall outside existing species clusters, and
+per-genus counts are compared against the species clusters GTDB already holds
+for the same genus. The species-level result is then checked at genome level by
+dereplicating the Ruminococcaceae representatives together with four comparison
+sets in a single run, so that any shared species cluster would be recovered
+directly rather than inferred from taxonomy.
+
+| File | Purpose |
+|---|---|
+| `scripts/12_stage_wild_sgb_batchfile.py` | GTDB-Tk batch file for the wild representatives |
+| `jobs/13_gtdbtk_wild_sgb.sh` | Classification against GTDB r220 |
+| `scripts/14_verify_wild_classify.py` | Assignments compared against the SGB manifest |
+| `scripts/15_audit_wild_classify_flags.py` | GTDB-Tk quality flags against contamination and GUNC |
+| `scripts/16_novelty_proportions.py` | Novelty proportions and per-genus expansion |
+| `scripts/17_sampling_effort_all_genera.py` | Expansion against GTDB species-cluster counts |
+| `scripts/18_genus_r220_to_r226_map.py` | Genus stability from r220 to r226 |
+| `scripts/19_stage_rum_drep.py` | Dereplication input set, first arm |
+| `scripts/20_stage_gtdb_refs_rum.py` | Dereplication input set, GTDB references |
+| `scripts/21_stage_amph_into_drep.py` | Dereplication input set, amphibian arms |
+| `jobs/22_pooled_drep_rum.sh` | Joint dereplication of five arms at 95% ANI |
+| `scripts/23_pooled_drep_multiarm_audit.py` | Cluster composition by arm |
+| `scripts/24_figure2_novelty.py` | Figure 2 and the genus-expansion permutation |
+
+Output: `figures/Figure2_novelty_expansion.pdf`
 
 ## Software
 
