@@ -63,6 +63,60 @@ directly rather than inferred from taxonomy.
 
 Output: `figures/Figure2_novelty_expansion.pdf`, `tables/TableS4`, `tables/TableS5`
 
+### Step 3. Genus composition against comparison catalogs
+
+Ruminococcaceae genome sets from two endotherm gut catalogs and a second,
+independent amphibian catalog are classified against GTDB r220 on the same
+taxonomy, then resolved into one unit per catalog per dereplication cluster so
+that the four genus pools are counted in the same currency. Pool differences
+are partitioned into turnover and nestedness, tested for sensitivity to the
+evidence threshold, and checked against accumulation curves, since a genus
+missing from a small catalog may reflect sampling rather than absence.
+
+| File | Purpose |
+|---|---|
+| `scripts/26_stage_ehi_nonherptile.py` | EHI mammal arm staged |
+| `jobs/27_gtdbtk_ehi_r220.sh` | EHI classification, identify and align |
+| `jobs/28_gtdbtk_ehi_classify_resume.sh` | EHI classification, classify step |
+| `scripts/29_stage_ehi_amphibian.py` | EHI newt arm staged |
+| `jobs/30_gtdbtk_ehi_amphibian.sh` | EHI newt classification |
+| `jobs/31_gtdbtk_youngblut.sh` | Youngblut classification |
+| `scripts/32_pooled_drep_composition.py` | Clusters resolved to units per arm |
+| `scripts/33_turnover_nestedness.py` | Turnover, nestedness, thresholds, accumulation |
+| `scripts/34_four_catalog_genus_table.py` | Genus recovery blocks and matched Jaccard |
+| `scripts/35_amphibian_genus_replication.py` | Recovery across the two amphibian catalogs |
+| `scripts/36_figure3_cross_catalog.py` | Figure 3 |
+| `scripts/37_make_step3_table.py` | Supplementary table S6 |
+
+Output: `figures/Figure3_cross_catalog_overlap.pdf`, `tables/TableS6`
+
+### Step 3. Genus composition against comparison catalogs
+
+Ruminococcaceae genome sets from two endotherm gut catalogs and a second,
+independent amphibian catalog are classified against GTDB r220 on the same
+taxonomy, then resolved into one unit per catalog per dereplication cluster so
+that the four genus pools are counted in the same currency. Pool differences
+are partitioned into turnover and nestedness, tested for sensitivity to the
+evidence threshold, and checked against accumulation curves, since a genus
+missing from a small catalog may reflect sampling rather than absence.
+
+| File | Purpose |
+|---|---|
+| `scripts/26_stage_ehi_nonherptile.py` | EHI mammal arm staged |
+| `jobs/27_gtdbtk_ehi_r220.sh` | EHI classification, identify and align |
+| `jobs/28_gtdbtk_ehi_classify_resume.sh` | EHI classification, classify step |
+| `scripts/29_stage_ehi_amphibian.py` | EHI newt arm staged |
+| `jobs/30_gtdbtk_ehi_amphibian.sh` | EHI newt classification |
+| `jobs/31_gtdbtk_youngblut.sh` | Youngblut classification |
+| `scripts/32_pooled_drep_composition.py` | Clusters resolved to units per arm |
+| `scripts/33_turnover_nestedness.py` | Turnover, nestedness, thresholds, accumulation |
+| `scripts/34_four_catalog_genus_table.py` | Genus recovery blocks and matched Jaccard |
+| `scripts/35_amphibian_genus_replication.py` | Recovery across the two amphibian catalogs |
+| `scripts/36_figure3_cross_catalog.py` | Figure 3 |
+| `scripts/37_make_step3_table.py` | Supplementary table S6 |
+
+Output: `figures/Figure3_cross_catalog_overlap.pdf`, `tables/TableS6`
+
 ## Software
 
 GTDB-Tk 2.4.1 (GTDB r220), dRep 3.5.0, CheckM1, CheckM2 1.1.0, GUNC 1.0.6,
