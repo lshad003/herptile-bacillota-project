@@ -11,16 +11,14 @@
 #SBATCH --output=/bigdata/stajichlab/lshad003/ruminococcaceae-agent/logs/drep_rum.%j.out
 #SBATCH --error=/bigdata/stajichlab/lshad003/ruminococcaceae-agent/logs/drep_rum.%j.err
 
-# V1 (27148950) failed: `module load drep` gives CondaError in a batch shell,
-#   exit 127. Environment now copied verbatim from scripts/drep_rerun_2229.sh.
-# V2 (27149185) pended indefinitely: epyc fully allocated. Cancelled.
-# V3: stajichlab partition (r11 idle), plus 1,247 GTDB r220 Ruminococcaceae
-#   references staged in, so 1,795 genomes total.
-#   Reference completeness/contamination taken from data/gtdb/bac120_metadata.tsv
-#   (checkm_completeness, NOT checkm2, matching how the MAGs were scored).
-#   1,224 of 1,247 matched; 23 retain a stated fallback of comp 95 / con 2.
-#   62 references fall below the -comp 70 floor and will be dropped, so
-#   expect 1,733 genomes clustered from 1,795 staged. No MAG arm loses any.
+# Reference completeness and contamination are taken from
+# data/gtdb/bac120_metadata.tsv using checkm_completeness rather than CheckM2,
+# matching how the MAG arms were scored, so one tool underlies the whole run.
+# 1,224 of 1,247 references matched; 23 retain a stated fallback of
+# completeness 95 and contamination 2.
+# The -comp 70 floor drops 62 references before clustering. No MAG arm loses
+# any genome. Cluster membership is therefore defined over the genomes that
+# were compared, not over every genome staged.
 
 BASE=/bigdata/stajichlab/lshad003/ruminococcaceae-agent
 DREPENV=/bigdata/stajichlab/lshad003/condaenvs/drep
@@ -29,6 +27,7 @@ WORK=$BASE/work/pooled_drep_rum
 GDIR=$WORK/genomes
 INFO=$WORK/genome_info.csv
 OUT=$WORK/drep_out
+
 export PATH=$DREPBIN:$PATH
 
 echo "host    : $(hostname)"
@@ -40,13 +39,13 @@ ls -1 $DREPENV/conda-meta/ | grep -i -E "^drep|^fastani|^mash"
 echo
 $DREPBIN/dRep check_dependencies
 echo
-echo "genomes staged : $(ls $GDIR/*.fa | wc -l)"
+NSTAGED=$(ls $GDIR/*.fa | wc -l)
+echo "genomes staged : $NSTAGED"
 echo "genomeInfo rows: $(( $(wc -l < $INFO) - 1 ))"
 echo "-----------------------------------------------------------"
 
 # Parameters identical to scripts/drep_rerun_2229.sh, the run that produced
 # the 1,171 herptile SGBs, so the pooled clusters are directly comparable.
-
 $DREPBIN/dRep dereplicate $OUT \
   -g $GDIR/*.fa \
   --genomeInfo $INFO \
@@ -54,8 +53,8 @@ $DREPBIN/dRep dereplicate $OUT \
   -pa 0.90 -sa 0.95 -nc 0.30 --coverage_method larger \
   --S_algorithm fastANI --clusterAlg average \
   -p 24
-
 RC=$?
+
 echo "-----------------------------------------------------------"
 echo "dRep exit code: $RC"
 if [ $RC -ne 0 ]; then echo "DREP FAILED"; exit $RC; fi
@@ -68,7 +67,7 @@ echo "finished : $(date)"
 echo
 ls -1 $OUT/data_tables
 echo
-echo "genomes clustered : $(( $(wc -l < $CDB) - 1 )) of 1795 staged"
+echo "genomes clustered : $(( $(wc -l < $CDB) - 1 )) of $NSTAGED staged"
 echo "secondary clusters: $(tail -n +2 $CDB | cut -d, -f2 | sort -u | wc -l)"
 echo "Wdb rows          : $(( $(wc -l < $WDB) - 1 ))"
 echo "POOLED_DREP_RUM_V3_FINISHED"
