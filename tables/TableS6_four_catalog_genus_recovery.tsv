@@ -1,0 +1,134 @@
+genus	block	block_label	herptile_units	ehi_mammal_units	youngblut_units	gtdb_species_clusters
+UBA866	2_herptile_and_reference_only	herptile plus GTDB reference, not recovered by EHI or Youngblut	40	0	0	10
+JAGPHI01	2_herptile_and_reference_only	herptile plus GTDB reference, not recovered by EHI or Youngblut	12	0	0	1
+JAIHAL01	2_herptile_and_reference_only	herptile plus GTDB reference, not recovered by EHI or Youngblut	12	0	0	2
+Harryflintia	2_herptile_and_reference_only	herptile plus GTDB reference, not recovered by EHI or Youngblut	7	0	0	4
+Hydrogenoanaerobacterium	2_herptile_and_reference_only	herptile plus GTDB reference, not recovered by EHI or Youngblut	5	0	0	1
+JAAYCI01	2_herptile_and_reference_only	herptile plus GTDB reference, not recovered by EHI or Youngblut	5	0	0	3
+RGIG3102	2_herptile_and_reference_only	herptile plus GTDB reference, not recovered by EHI or Youngblut	4	0	0	22
+Massilioclostridium	2_herptile_and_reference_only	herptile plus GTDB reference, not recovered by EHI or Youngblut	3	0	0	2
+Merdimmobilis	2_herptile_and_reference_only	herptile plus GTDB reference, not recovered by EHI or Youngblut	2	0	0	1
+Soleaferrea	2_herptile_and_reference_only	herptile plus GTDB reference, not recovered by EHI or Youngblut	2	0	0	1
+CALWZE01	2_herptile_and_reference_only	herptile plus GTDB reference, not recovered by EHI or Youngblut	1	0	0	1
+CALXEM01	2_herptile_and_reference_only	herptile plus GTDB reference, not recovered by EHI or Youngblut	1	0	0	2
+JAUNTE01	2_herptile_and_reference_only	herptile plus GTDB reference, not recovered by EHI or Youngblut	1	0	0	1
+RGIG7389	2_herptile_and_reference_only	herptile plus GTDB reference, not recovered by EHI or Youngblut	1	0	0	1
+WRAV01	2_herptile_and_reference_only	herptile plus GTDB reference, not recovered by EHI or Youngblut	1	0	0	8
+Anaerotruncus	3_herptile_and_endotherm	herptile and at least one of EHI or Youngblut	42	0	1	16
+Angelakisella	3_herptile_and_endotherm	herptile and at least one of EHI or Youngblut	21	0	1	21
+Ruthenibacterium	3_herptile_and_endotherm	herptile and at least one of EHI or Youngblut	16	0	3	20
+Fimivivens	3_herptile_and_endotherm	herptile and at least one of EHI or Youngblut	7	0	1	12
+Negativibacillus	3_herptile_and_endotherm	herptile and at least one of EHI or Youngblut	4	1	3	14
+JAHHTP01	3_herptile_and_endotherm	herptile and at least one of EHI or Youngblut	3	1	0	1
+Massiliimalia	3_herptile_and_endotherm	herptile and at least one of EHI or Youngblut	2	1	0	6
+Fournierella	3_herptile_and_endotherm	herptile and at least one of EHI or Youngblut	1	2	4	16
+Acetanaerobacterium	4_no_herptile	absent from herptile	0	0	0	9
+Alloruminococcus	4_no_herptile	absent from herptile	0	0	0	1
+Anaerofilum	4_no_herptile	absent from herptile	0	0	1	5
+Aristotella	4_no_herptile	absent from herptile	0	0	0	1
+Avimicrobium	4_no_herptile	absent from herptile	0	1	0	5
+BNZF01	4_no_herptile	absent from herptile	0	0	0	1
+BNZN01	4_no_herptile	absent from herptile	0	0	0	1
+Bittarella	4_no_herptile	absent from herptile	0	0	0	2
+CAG-115	4_no_herptile	absent from herptile	0	4	2	73
+CAKRVU01	4_no_herptile	absent from herptile	0	0	0	1
+CALBJC01	4_no_herptile	absent from herptile	0	0	0	1
+CALWZA01	4_no_herptile	absent from herptile	0	0	0	1
+CALXAK01	4_no_herptile	absent from herptile	0	0	0	1
+CALXEL01	4_no_herptile	absent from herptile	0	0	0	1
+CALXEN01	4_no_herptile	absent from herptile	0	0	0	3
+CALXGT01	4_no_herptile	absent from herptile	0	0	0	2
+CALXIC01	4_no_herptile	absent from herptile	0	0	0	1
+CAMMMX01	4_no_herptile	absent from herptile	0	0	0	1
+CAMTHN01	4_no_herptile	absent from herptile	0	0	0	2
+CANPXN01	4_no_herptile	absent from herptile	0	0	0	1
+CANQKG01	4_no_herptile	absent from herptile	0	0	0	2
+CANRLN01	4_no_herptile	absent from herptile	0	1	0	1
+CASGDD01	4_no_herptile	absent from herptile	0	0	0	1
+CATJLA01	4_no_herptile	absent from herptile	0	0	0	1
+CATNEU01	4_no_herptile	absent from herptile	0	0	0	1
+Egerieicola	4_no_herptile	absent from herptile	0	0	0	4
+FB2012	4_no_herptile	absent from herptile	0	0	0	22
+Faecalibacterium	4_no_herptile	absent from herptile	0	11	8	65
+Faeciplasma	4_no_herptile	absent from herptile	0	7	1	35
+Faecivivens	4_no_herptile	absent from herptile	0	2	0	13
+Falkowella	4_no_herptile	absent from herptile	0	0	0	1
+Firm-04	4_no_herptile	absent from herptile	0	0	1	36
+Fumia	4_no_herptile	absent from herptile	0	0	0	3
+Gemmiger	4_no_herptile	absent from herptile	0	8	9	52
+Gemmiger_A	4_no_herptile	absent from herptile	0	0	0	4
+HGM13222	4_no_herptile	absent from herptile	0	0	0	4
+HGM13233	4_no_herptile	absent from herptile	0	0	1	1
+HUN007	4_no_herptile	absent from herptile	0	0	1	14
+Heteroruminococcus	4_no_herptile	absent from herptile	0	0	0	4
+Hominimerdicola	4_no_herptile	absent from herptile	0	4	0	37
+Huintestinicola	4_no_herptile	absent from herptile	0	4	0	24
+JAAVYW01	4_no_herptile	absent from herptile	0	0	0	1
+JAAYPV01	4_no_herptile	absent from herptile	0	0	0	3
+JAAYSD01	4_no_herptile	absent from herptile	0	1	0	1
+JAAZLM01	4_no_herptile	absent from herptile	0	0	0	2
+JAAZZIT01	4_no_herptile	absent from herptile	0	0	0	5
+JAEDDN01	4_no_herptile	absent from herptile	0	0	0	1
+JAEXNS01	4_no_herptile	absent from herptile	0	0	0	1
+JAEZYS01	4_no_herptile	absent from herptile	0	0	0	2
+JAFBIO01	4_no_herptile	absent from herptile	0	0	0	2
+JAHHUA01	4_no_herptile	absent from herptile	0	0	1	2
+JAISGY01	4_no_herptile	absent from herptile	0	0	0	4
+JAITEB01	4_no_herptile	absent from herptile	0	0	0	1
+JALELV01	4_no_herptile	absent from herptile	0	0	0	2
+JARBTU01	4_no_herptile	absent from herptile	0	0	0	1
+Ligaoa	4_no_herptile	absent from herptile	0	0	0	1
+Marseille-P2935	4_no_herptile	absent from herptile	0	0	0	1
+Merdivicinus	4_no_herptile	absent from herptile	0	0	0	11
+Metaruminococcus	4_no_herptile	absent from herptile	0	0	0	2
+Metaruminococcus_A	4_no_herptile	absent from herptile	0	0	0	6
+NK3A76	4_no_herptile	absent from herptile	0	0	0	4
+Neobittarella	4_no_herptile	absent from herptile	0	0	0	1
+Neoruminococcus	4_no_herptile	absent from herptile	0	0	0	1
+Porcipelethomonas	4_no_herptile	absent from herptile	0	0	0	13
+Pseudoruminococcus_B	4_no_herptile	absent from herptile	0	0	0	3
+Pygmaiobacter	4_no_herptile	absent from herptile	0	0	0	9
+RGIG1943	4_no_herptile	absent from herptile	0	0	0	1
+RGIG1955	4_no_herptile	absent from herptile	0	0	0	1
+RGIG3077	4_no_herptile	absent from herptile	0	0	0	1
+RGIG4130	4_no_herptile	absent from herptile	0	0	0	1
+RGIG4131	4_no_herptile	absent from herptile	0	0	0	7
+RGIG4694	4_no_herptile	absent from herptile	0	0	0	6
+RGIG5675	4_no_herptile	absent from herptile	0	0	0	1
+RGIG8367	4_no_herptile	absent from herptile	0	0	0	2
+RGIG8773	4_no_herptile	absent from herptile	0	0	0	26
+RGIG8779	4_no_herptile	absent from herptile	0	0	0	2
+RGIG9114	4_no_herptile	absent from herptile	0	0	0	1
+RUG11783	4_no_herptile	absent from herptile	0	0	0	6
+RUG12519	4_no_herptile	absent from herptile	0	0	0	9
+Ruminiclostridium_E	4_no_herptile	absent from herptile	0	2	1	83
+Ruminococcus	4_no_herptile	absent from herptile	0	8	3	150
+Ruminococcus_C	4_no_herptile	absent from herptile	0	2	1	32
+Ruminococcus_F	4_no_herptile	absent from herptile	0	0	0	3
+SFIE01	4_no_herptile	absent from herptile	0	0	0	1
+SFJ001	4_no_herptile	absent from herptile	0	0	0	3
+SIG526	4_no_herptile	absent from herptile	0	0	0	3
+SIG578	4_no_herptile	absent from herptile	0	0	0	4
+STD2-12	4_no_herptile	absent from herptile	0	0	0	1
+SZUA-444	4_no_herptile	absent from herptile	0	0	0	5
+Schneewindia	4_no_herptile	absent from herptile	0	0	0	1
+UBA11540	4_no_herptile	absent from herptile	0	0	0	1
+UBA1366	4_no_herptile	absent from herptile	0	0	0	1
+UBA1404	4_no_herptile	absent from herptile	0	0	0	1
+UBA1405	4_no_herptile	absent from herptile	0	0	0	5
+UBA1762	4_no_herptile	absent from herptile	0	0	0	3
+UBA3818	4_no_herptile	absent from herptile	0	0	0	9
+UBA3855	4_no_herptile	absent from herptile	0	3	0	36
+UBA5884	4_no_herptile	absent from herptile	0	3	0	5
+UBA7177	4_no_herptile	absent from herptile	0	0	0	3
+UBA7477	4_no_herptile	absent from herptile	0	2	0	10
+UBA946	4_no_herptile	absent from herptile	0	0	0	2
+UMGS1601	4_no_herptile	absent from herptile	0	6	1	18
+UMGS1668	4_no_herptile	absent from herptile	0	0	0	20
+UMGS1889	4_no_herptile	absent from herptile	0	0	0	4
+UMGS363	4_no_herptile	absent from herptile	0	1	0	11
+WRIP01	4_no_herptile	absent from herptile	0	0	0	2
+WRME01	4_no_herptile	absent from herptile	0	0	0	2
+YE71	4_no_herptile	absent from herptile	0	4	2	13
+Youxingia	4_no_herptile	absent from herptile	0	0	0	1
+Zongyangia	4_no_herptile	absent from herptile	0	0	0	2
