@@ -149,8 +149,9 @@ any remaining bias runs.
 | `jobs/67_annot_154.sh` | Pfam and KofamScan annotation |
 | `scripts/68_parse_annot_154.py` | Annotation parsed into presence matrices |
 | `scripts/69_annot_rate_by_arm.py` | Per-protein annotation rate compared between arms |
+| `scripts/84_figure_cazy_tree_heatmap.py` | CAZy family heatmap |
 
-Output: `figures/Figure_gene_content.pdf`
+Output: `figures/Figure_gene_content.pdf`, `figures/Figure_cazy_tree_heatmap.pdf`
 
 
 ## Software
