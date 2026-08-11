@@ -154,6 +154,35 @@ any remaining bias runs.
 
 Output: `figures/Figure_gene_content.pdf`, `figures/Figure_cazy_tree_heatmap.pdf`, `tables/TableS8`, `tables/TableS9`
 
+### Step 6. Biosynthetic gene clusters
+
+Biosynthetic gene clusters are detected in all five arms and counted separately
+as complete and as contig-edge, since a fragmented assembly splits clusters and
+loses their boundaries. Cluster counts are then examined against assembly
+contiguity within each arm before any between-arm statement is made, and product
+class composition is compared only for classes whose proportion does not track
+contiguity within arms.
+
+| File | Purpose |
+|---|---|
+| `scripts/70_stage_bgc_input.py` | Amphibian genomes staged |
+| `jobs/71_antismash_amphibian.sh` | antiSMASH, amphibian arm |
+| `scripts/72_parse_antismash_amphibian.py` | Amphibian output parsed |
+| `scripts/73_stage_bgc_refs.py` | Reference genomes staged |
+| `jobs/74_antismash_refs.sh` | antiSMASH, reference arm |
+| `scripts/75_parse_antismash_refs.py` | Reference output parsed |
+| `scripts/76_stage_bgc_endotherm.py` | Comparison genomes staged |
+| `jobs/77_antismash_endotherm.sh` | antiSMASH, comparison arms |
+| `scripts/78_parse_antismash_endotherm.py` | Comparison output parsed |
+| `scripts/79_assembly_quality_arms.py` | Contiguity measured from staged fastas |
+| `scripts/80_assembly_quality_all_arms.py` | Comparison arms added |
+| `scripts/81_bgc_density_and_carriage.py` | Density per megabase and carriage |
+| `scripts/82_bgc_class_composition.py` | Class composition with the fragmentation gate |
+| `scripts/83_figure_bgc_contiguity.py` | Figure |
+| `scripts/86_make_step6_table.py` | Supplementary table S10 |
+
+Output: `figures/Figure_bgc_contiguity.pdf`, `tables/TableS10`
+
 
 ## Software
 
