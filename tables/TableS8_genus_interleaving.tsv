@@ -1,0 +1,11 @@
+genus	n_amphibian	n_other	observed_transitions	null_mean	null_lo	null_hi	obs_over_null	p	largest_pure_amphibian_clade	verdict_in_source	used_for_gene_content_testing
+Anaerotruncus	46	17	7	14.93	12	17	0.4688	0.0020	13	partly interleaved	yes
+UBA866	52	10	5	9.49	8	10	0.5267	0.0020	13	partly interleaved	yes
+Harryflintia	8	4	3	3.52	2	4	0.8515	0.4380	4	interleaved, testable	no
+Ruthenibacterium	18	23	2	13.69	11	17	0.1461	0.0020	14	separate blocks, NOT testable	no
+Fimivivens	7	14	2	6.07	4	7	0.3295	0.0020	4	separate blocks, NOT testable	no
+JAAYCI01	5	5	2	3.64	2	5	0.5502	0.0960	4	separate blocks, NOT testable	no
+Massiliimalia	3	7	2	2.74	2	3	0.7295	0.2400	2	separate blocks, NOT testable	no
+Angelakisella	31	26	1	19.00	15	22	0.0526	0.0020	31	separate blocks, NOT testable	no
+Negativibacillus	6	20	1	5.53	4	6	0.1809	0.0020	6	separate blocks, NOT testable	no
+RGIG3102	5	22	1	4.69	3	5	0.2132	0.0020	5	separate blocks, NOT testable	no
