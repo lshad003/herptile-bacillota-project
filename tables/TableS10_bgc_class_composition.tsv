@@ -1,0 +1,46 @@
+product_class	arm	n_genomes	mean_per_genome_proportion	n_arms_fragmentation_flagged	passes_gate
+NRPS	UHM amphibian	118	0.026271	1	no
+NRPS	EHI newt	102	0.028105	1	no
+NRPS	EHI mammal	201	0.033801	1	no
+NRPS	Youngblut	20	0.030952	1	no
+NRPS	GTDB reference	794	0.082168	1	no
+NRPS-like	UHM amphibian	118	0.062147	0	yes
+NRPS-like	EHI newt	102	0.124346	0	yes
+NRPS-like	EHI mammal	201	0.004027	0	yes
+NRPS-like	Youngblut	20	0.010000	0	yes
+NRPS-like	GTDB reference	794	0.027591	0	yes
+RRE-containing	UHM amphibian	118	0.072821	0	yes
+RRE-containing	EHI newt	102	0.029739	0	yes
+RRE-containing	EHI mammal	201	0.169144	0	yes
+RRE-containing	Youngblut	20	0.170000	0	yes
+RRE-containing	GTDB reference	794	0.177733	0	yes
+RiPP-like	UHM amphibian	118	0.015113	1	no
+RiPP-like	EHI newt	102	0.014706	1	no
+RiPP-like	EHI mammal	201	0.031841	1	no
+RiPP-like	Youngblut	20	0.083810	1	no
+RiPP-like	GTDB reference	794	0.029496	1	no
+arylpolyene	UHM amphibian	118	0.000000	0	yes
+arylpolyene	EHI newt	102	0.000000	0	yes
+arylpolyene	EHI mammal	201	0.004975	0	yes
+arylpolyene	Youngblut	20	0.006250	0	yes
+arylpolyene	GTDB reference	794	0.019965	0	yes
+betalactone	UHM amphibian	118	0.085250	2	no
+betalactone	EHI newt	102	0.068137	2	no
+betalactone	EHI mammal	201	0.047317	2	no
+betalactone	Youngblut	20	0.041667	2	no
+betalactone	GTDB reference	794	0.040001	2	no
+cyclic-lactone-autoinducer	UHM amphibian	118	0.320581	1	no
+cyclic-lactone-autoinducer	EHI newt	102	0.269036	1	no
+cyclic-lactone-autoinducer	EHI mammal	201	0.231853	1	no
+cyclic-lactone-autoinducer	Youngblut	20	0.212500	1	no
+cyclic-lactone-autoinducer	GTDB reference	794	0.207137	1	no
+phosphonate	UHM amphibian	118	0.029237	1	no
+phosphonate	EHI newt	102	0.060784	1	no
+phosphonate	EHI mammal	201	0.065040	1	no
+phosphonate	Youngblut	20	0.055952	1	no
+phosphonate	GTDB reference	794	0.063152	1	no
+ranthipeptide	UHM amphibian	118	0.366687	1	no
+ranthipeptide	EHI newt	102	0.384886	1	no
+ranthipeptide	EHI mammal	201	0.376962	1	no
+ranthipeptide	Youngblut	20	0.363869	1	no
+ranthipeptide	GTDB reference	794	0.323257	1	no
