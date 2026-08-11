@@ -109,6 +109,49 @@ are reported as untestable rather than as undetected.
 
 Output: `figures/Figure_reads_vs_genomes.pdf`, `tables/TableS7`
 
+### Step 5. Gene content where host and lineage can be separated
+
+Gene content can be attributed to host origin only in genera where amphibian
+and reference genomes are phylogenetically interleaved, so a joint tree is
+built first and genera are tested for interleaving before any functional
+comparison. Within the two qualifying genera, protein clusters are merged into
+orthologous groups and carbohydrate-active enzyme families are annotated on an
+independent layer. Both are modelled against genome completeness, since the
+arms differ in it, and both are checked against label permutations. Per-protein
+annotation rate is measured separately, because it sets the direction in which
+any remaining bias runs.
+
+| File | Purpose |
+|---|---|
+| `scripts/44_extract_ref_msa.py` | Reference alignments extracted and masked |
+| `scripts/45_build_rep_tree_msa.py` | Query alignments assembled |
+| `scripts/46_build_figure_tree_msa.py` | Tree input combined with outgroup |
+| `jobs/47_figure_tree.sh` | Joint tree inferred |
+| `scripts/48_add_ref_genus_to_tree_meta.py` | Genus assignments joined onto reference tips |
+| `scripts/49_check_genus_interleaving.py` | Interleaving tested by Fitch parsimony |
+| `scripts/50_stage_focal_genus_proteomes.py` | Focal proteomes staged |
+| `jobs/51_mmseqs_focal_pangenomes.sh` | Protein clustering |
+| `jobs/52_eggnog_focal.sh` | Orthologous group assignment |
+| `scripts/53_merge_clusters_by_og.py` | Clusters merged by orthologous group |
+| `jobs/54_checkm2_focal.sh` | Completeness and contamination |
+| `scripts/55_run_happi_focal.R` | Clustering parameter comparison |
+| `scripts/56_run_happi_merged.R` | Prevalence modelled against completeness |
+| `jobs/57_happi_merged.sh` | Real fit and two permutations |
+| `scripts/58_genus_filter_merged.py` | Direction required to agree within genera |
+| `scripts/59_figure_gene_content.py` | Gene content figure |
+| `scripts/60_stage_cazy_targets.py` | Proteomes staged for CAZy annotation |
+| `jobs/61_cazy_hmmsearch.sh` | dbCAN search |
+| `scripts/62_parse_cazy_focal.py` | Hits filtered and reduced to a family matrix |
+| `scripts/63_run_happi_cazy.R` | CAZy prevalence modelled against completeness |
+| `jobs/64_happi_cazy.sh` | Real fit and two permutations |
+| `scripts/65_cazy_untested_families.py` | Rare families scanned across unassigned clades |
+| `scripts/66_extract_pfam_models.py` | Individual Pfam models extracted |
+| `jobs/67_annot_154.sh` | Pfam and KofamScan annotation |
+| `scripts/68_parse_annot_154.py` | Annotation parsed into presence matrices |
+| `scripts/69_annot_rate_by_arm.py` | Per-protein annotation rate compared between arms |
+
+Output: `figures/Figure_gene_content.pdf`
+
 
 ## Software
 
