@@ -20,7 +20,7 @@ chimerism and for the rRNA and tRNA features required by the MIMAG standard.
 Feature recovery is measured in a set of GTDB reference genomes as well, using
 one parsing pipeline for both, so that the two are comparable.
 
-**Main result.** The catalog contains 2,229 Bacillota_A MAGs, dereplicated at 95% ANI to 1,171 SGB representatives, of which 718 contain at least one wild-derived MAG. Genome-quality screens supported the overall integrity of the catalog. Comparison against GTDB Ruminococcaceae references showed that complete feature recovery is equivalent for short features and declines as feature length rises, consistent with assembly fragmentation reducing complete recovery of long genomic features.
+**Main result.** The catalog contains 2,229 Bacillota_A MAGs, dereplicated at 95% ANI to 1,171 SGB representatives, including 718 with at least one wild-derived MAG. Genome-quality screens supported the integrity of the catalog. Comparison with GTDB Ruminococcaceae references showed that short genomic features are recovered at comparable rates in both sets, while recovery of longer features tracks assembly contiguity, which sets the expectation for the long-feature analyses later in the study.
 
 | File | Purpose |
 |---|---|
