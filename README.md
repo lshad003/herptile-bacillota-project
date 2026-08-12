@@ -14,6 +14,9 @@ remain on the UCR HPCC cluster.
 Steps are numbered by the order the analyses were run, not by manuscript
 section. Filenames are numbered sequentially across the whole repository.
 
+Section numbering is provisional and will change if the scope of the paper
+changes.
+
 | Repo step | Manuscript section |
 |---|---|
 | Step 1 | 3.1 catalog construction, and 3.3 assembly contiguity |
