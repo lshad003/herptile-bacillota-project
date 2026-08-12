@@ -23,7 +23,7 @@ chimerism and for the rRNA and tRNA features required by the MIMAG standard.
 Feature recovery is measured in a set of GTDB reference genomes as well, using
 one parsing pipeline for both, so that the two are comparable.
 
-**Main result.** The catalog contains 2,229 Bacillota_A MAGs, dereplicated at 95% ANI to 1,171 SGB representatives, of which 718 contain at least one wild-derived MAG. Genome-quality screens supported the overall integrity of the catalog. Comparison against GTDB Ruminococcaceae references showed that complete feature recovery is equivalent for short features and declines as feature length rises, consistent with assembly fragmentation truncating long genomic features.
+**Main result.** The catalog contains 2,229 Bacillota_A MAGs, dereplicated at 95% ANI to 1,171 SGB representatives, of which 718 contain at least one wild-derived MAG. Genome-quality screens supported the overall integrity of the catalog. Comparison against GTDB Ruminococcaceae references showed that complete feature recovery is equivalent for short features and declines as feature length rises, consistent with assembly fragmentation reducing complete recovery of long genomic features.
 
 | File | Purpose |
 |---|---|
@@ -82,7 +82,7 @@ are partitioned into turnover and nestedness, tested for sensitivity to the
 evidence threshold, and checked against accumulation curves, since a genus
 missing from a small catalog may reflect sampling rather than absence.
 
-**Main result.** Ruminococcaceae genus composition in the wild catalog differs from the EHI comparison catalog by replacement rather than nested loss. Both arms hold 23 genera and share four, giving Sorensen dissimilarity 0.826 with no nestedness component. The independent EHI newt catalog is closer to the wild catalog than to the EHI arm, although its 43 units are fully nested within the wild set and no arm has saturated, so absences in the smaller arms carry little weight.
+**Main result.** Ruminococcaceae genus composition in the wild catalog differs from the EHI comparison catalog by replacement rather than nested loss. Both arms hold 23 genera and share four, giving Sorensen dissimilarity 0.826 with no nestedness component. The independent EHI newt catalog is closer to the wild catalog than to the EHI arm, with all 14 EHI newt genera represented among the 23 wild genera. No arm has saturated, so absences in the smaller arms carry little weight.
 
 | File | Purpose |
 |---|---|
