@@ -9,6 +9,25 @@ and are left unchanged, so that a file here can be compared directly against the
 version that was run. Genomes and intermediate data are not committed; they
 remain on the UCR HPCC cluster.
 
+## How the steps map to the manuscript
+
+Steps are numbered by the order the analyses were run, not by manuscript
+section. Filenames are numbered sequentially across the whole repository.
+
+| Repo step | Manuscript section |
+|---|---|
+| Step 1 | 3.1 catalog construction, and 3.3 assembly contiguity |
+| Step 2 | 3.2 novelty against GTDB r220 |
+| Step 3 | 3.4 genus composition against comparison catalogs |
+| Step 4 | folded into 3.2 as the taxonomy testability result |
+| Step 5 | 3.5 gene content |
+| Step 6 | 3.6 biosynthetic gene clusters |
+
+Step 4 was originally a full section on read profiling against genome
+recovery. Only the count of genera whose names correspond between GTDB and
+NCBI is retained in the manuscript; the scripts for the rest of that
+analysis remain here because they were run.
+
 ## Steps
 
 ### Step 1. Catalog construction and quality assessment
