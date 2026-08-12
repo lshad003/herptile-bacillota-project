@@ -4,14 +4,9 @@ Code and job scripts behind a comparative genomics study of Bacillota_A
 metagenome-assembled genomes recovered from reptile and amphibian gut
 metagenomes.
 
-Paths inside the scripts point at the working repository, `ruminococcaceae-agent`,
-and are left unchanged, so that a file here can be compared directly against the
-version that was run. Genomes and intermediate data are not committed; they
-remain on the UCR HPCC cluster.
-
-Steps are numbered by the order the analyses were run. Filenames are
-numbered sequentially across the whole repository, so a script added to an
-earlier step after later work was finished carries a higher number.
+Filenames are numbered in the order scripts were added across the whole
+repository, so a script added to an earlier step later carries a higher
+number.
 
 ## Steps
 
