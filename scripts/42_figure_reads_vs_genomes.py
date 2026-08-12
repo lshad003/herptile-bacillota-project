@@ -131,6 +131,9 @@ for p in rows:
     except (ValueError, KeyError, IndexError):
         continue
 
+KEEP = ("reads_and_wild_genome", "wild_genome_no_reads")
+recs = [r for r in recs if r["b"] in KEEP]
+print("panel C restricted to %d wild catalog genera" % len(recs))
 nz = [r["f"] for r in recs if r["f"] > 0]
 LO, HI = math.log10(min(nz)), math.log10(max(nz))
 XZERO = LO - 0.62
@@ -146,11 +149,7 @@ axC.axvspan(XZERO - 0.30, XZERO + 0.22, color="#f2f2f2", zorder=0)
 axC.axhline(Y(0), color="#e0e0e0", lw=1.0, zorder=0)
 
 STYLE = [("reads_and_wild_genome", WILD, "o", 62, "reads and a wild genome"),
-         ("reads_and_captive_genome_only", CAPT, "s", 58,
-          "reads, genome from captive hosts only"),
-         ("wild_genome_no_reads", NORD, "^", 60, "wild genome, no reads"),
-         ("captive_genome_no_reads", GREY, "v", 44,
-          "captive genome only, no reads")]
+         ("wild_genome_no_reads", NORD, "^", 60, "wild genome, no reads")]
 
 random.seed(7)
 placed = []
@@ -220,10 +219,9 @@ axC.set_yticklabels([str(v) for v in yt], fontsize=8)
 axC.set_ylim(-0.30, YTOP)
 
 axC.set_xlabel("mean read fraction across 44 wild samples", fontsize=9)
-axC.set_ylabel("wild SGBs recovered\n(0 = captive-derived genomes only)",
+axC.set_ylabel("wild SGBs recovered", 
                fontsize=9, linespacing=1.4)
-axC.set_title("C   Read abundance does not determine which lineages\n"
-              "were recovered as genomes", fontsize=10, loc="left", pad=9)
+axC.set_title("C   Read abundance is a poor predictor of genome recovery", fontsize=10, loc="left", pad=9)
 axC.spines["top"].set_visible(False)
 axC.spines["right"].set_visible(False)
 axC.legend(loc="upper left", fontsize=7.6, frameon=False,
@@ -257,11 +255,11 @@ PANEL B. Testability of the {tot} wild catalog genera.
   MUST STATE: do NOT collapse the untestable categories into "not detected".
   {untest} of {tot} genera were never testable.
 
-PANEL C. The {rec} testable genera, four outcomes.
+PANEL C. The {rec} testable wild catalog genera, two outcomes.
 {buckets}
   Points in the shaded column had NO reads assigned in ANY of the 44 wild
-  samples. Points at y = 0 have no wild genome but DO have captive-derived
-  genomes in the catalog. Both are real categories, not missing data.
+  samples. Points at y = 0 were not recovered as wild genomes.
+  Both are real categories, not missing data.
   Jitter is applied at zero positions only.
   MUST STATE the key contrast: Faecalibacterium reads were about TWICE as
   abundant as Anaerotruncus reads in the same samples, yet 42 wild
