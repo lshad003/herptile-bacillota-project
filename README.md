@@ -51,7 +51,7 @@ dereplicating the Ruminococcaceae representatives together with four comparison
 sets in a single run, so that any shared species cluster would be recovered
 directly rather than inferred from taxonomy.
 
-**Main result.** Of the 718 wild SGB representatives, 715 (99.6%) had no match to an existing GTDB r220 species cluster. Joint dereplication at 95% ANI with four external genome sets produced no cluster containing both a wild-catalog genome and a genome from any other set, while 57 clusters did span the external sets, showing the procedure detects shared species where they exist.
+**Main result.** Of the 718 wild SGB representatives, 715 (99.6%) had no match to an existing GTDB r220 species cluster. Joint dereplication at 95% ANI with four external genome sets produced no cluster containing both a wild-catalog genome and a genome from any other set, while 57 clusters contained genomes from more than one external set, so cross-set clustering did occur in the same run.
 
 | File | Purpose |
 |---|---|
