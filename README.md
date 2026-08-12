@@ -1,12 +1,14 @@
 # Herptile gut Bacillota_A: analysis record
 
-Code and job scripts behind a comparative genomics study of Bacillota_A
-metagenome-assembled genomes recovered from reptile and amphibian gut
-metagenomes.
+This repository documents the analyses used to characterize Bacillota_A
+genomes recovered from reptile and amphibian gut metagenomes, determine how
+much of that diversity is represented in existing genome databases, compare
+Ruminococcaceae composition across independent genome catalogs, and examine
+whether gene content and biosynthetic features differ in lineages where host
+origin can be separated from phylogeny.
 
-Filenames are numbered in the order scripts were added across the whole
-repository, so a script added to an earlier step later carries a higher
-number.
+Each step below summarizes the analysis, its main result, the scripts used,
+and the resulting figures or supplementary tables.
 
 ## Steps
 
