@@ -9,27 +9,9 @@ and are left unchanged, so that a file here can be compared directly against the
 version that was run. Genomes and intermediate data are not committed; they
 remain on the UCR HPCC cluster.
 
-## How the steps map to the manuscript
-
-Steps are numbered by the order the analyses were run, not by manuscript
-section. Filenames are numbered sequentially across the whole repository.
-
-Section numbering is provisional and will change if the scope of the paper
-changes.
-
-| Repo step | Manuscript section |
-|---|---|
-| Step 1 | 3.1 catalog construction, and 3.3 assembly contiguity |
-| Step 2 | 3.2 novelty against GTDB r220 |
-| Step 3 | 3.4 genus composition against comparison catalogs |
-| Step 4 | folded into 3.2 as the taxonomy testability result |
-| Step 5 | 3.5 gene content |
-| Step 6 | 3.6 biosynthetic gene clusters |
-
-Step 4 was originally a full section on read profiling against genome
-recovery. Only the count of genera whose names correspond between GTDB and
-NCBI is retained in the manuscript; the scripts for the rest of that
-analysis remain here because they were run.
+Steps are numbered by the order the analyses were run. Filenames are
+numbered sequentially across the whole repository, so a script added to an
+earlier step after later work was finished carries a higher number.
 
 ## Steps
 
@@ -40,6 +22,8 @@ into species-level genome bins, and each representative is assessed for
 chimerism and for the rRNA and tRNA features required by the MIMAG standard.
 Feature recovery is measured in a set of GTDB reference genomes as well, using
 one parsing pipeline for both, so that the two are comparable.
+
+**Main result.** The catalog contains 2,229 Bacillota_A MAGs, dereplicated at 95% ANI to 1,171 SGB representatives, of which 718 contain at least one wild-derived MAG. Genome-quality screens supported the overall integrity of the catalog. Comparison against GTDB Ruminococcaceae references showed that complete feature recovery is equivalent for short features and declines as feature length rises, consistent with assembly fragmentation truncating long genomic features.
 
 | File | Purpose |
 |---|---|
@@ -53,8 +37,9 @@ one parsing pipeline for both, so that the two are comparable.
 | `scripts/09_audit_gunc.py` | Chimerism summary |
 | `scripts/10_figure1_catalog.py` | Figure 1 |
 | `scripts/11_make_step1_tables.py` | Supplementary tables S1 to S3 |
+| `scripts/87_figure_feature_length_ratio.py` | Feature recovery against feature length |
 
-Output: `figures/Figure1_catalog.pdf`, `tables/TableS1` to `TableS3`
+Output: `figures/Figure1_catalog.pdf`, `figures/Figure_feature_length_ratio.pdf`, `tables/TableS1` to `TableS3`
 
 ### Step 2. Novelty against GTDB r220
 
@@ -65,6 +50,8 @@ for the same genus. The species-level result is then checked at genome level by
 dereplicating the Ruminococcaceae representatives together with four comparison
 sets in a single run, so that any shared species cluster would be recovered
 directly rather than inferred from taxonomy.
+
+**Main result.** Of the 718 wild SGB representatives, 715 (99.6%) had no match to an existing GTDB r220 species cluster. Joint dereplication at 95% ANI with four external genome sets produced no cluster containing both a wild-catalog genome and a genome from any other set, while 57 clusters did span the external sets, showing the procedure detects shared species where they exist.
 
 | File | Purpose |
 |---|---|
@@ -87,13 +74,15 @@ Output: `figures/Figure2_novelty_expansion.pdf`, `tables/TableS4`, `tables/Table
 
 ### Step 3. Genus composition against comparison catalogs
 
-Ruminococcaceae genome sets from two endotherm gut catalogs and a second,
+Ruminococcaceae genome sets from the EHI and Youngblut catalogs and a second,
 independent amphibian catalog are classified against GTDB r220 on the same
 taxonomy, then resolved into one unit per catalog per dereplication cluster so
 that the four genus pools are counted in the same currency. Pool differences
 are partitioned into turnover and nestedness, tested for sensitivity to the
 evidence threshold, and checked against accumulation curves, since a genus
 missing from a small catalog may reflect sampling rather than absence.
+
+**Main result.** Ruminococcaceae genus composition in the wild catalog differs from the EHI comparison catalog by replacement rather than nested loss. Both arms hold 23 genera and share four, giving Sorensen dissimilarity 0.826 with no nestedness component. The independent EHI newt catalog is closer to the wild catalog than to the EHI arm, although its 43 units are fully nested within the wild set and no arm has saturated, so absences in the smaller arms carry little weight.
 
 | File | Purpose |
 |---|---|
@@ -120,6 +109,8 @@ not correspond one to one, the comparison is restricted to genera whose names
 map reciprocally between the two taxonomies, and genera failing that criterion
 are reported as untestable rather than as undetected.
 
+**Main result.** Comparison between genome recovery and NCBI-based read profiling is limited by taxonomy rather than by the number of genomes recovered. Of 123 genera in the wild catalog, only 27 have reciprocal GTDB to NCBI genus mappings permitting an unambiguous comparison; 39 of the remainder carry placeholder names with no NCBI equivalent on any reference genome. Among the 27, 14 were classified in reads and 13 were recovered as genomes without any genus-level read assignment. This step measures an interoperability limit between two taxonomies rather than providing a complete abundance comparison.
+
 | File | Purpose |
 |---|---|
 | `scripts/38_gtdb_ncbi_genus_map.py` | GTDB genera mapped onto NCBI names |
@@ -142,6 +133,8 @@ independent layer. Both are modelled against genome completeness, since the
 arms differ in it, and both are checked against label permutations. Per-protein
 annotation rate is measured separately, because it sets the direction in which
 any remaining bias runs.
+
+**Main result.** Gene content comparisons were restricted to the two genera in which amphibian and reference genomes are phylogenetically interleaved, so that host origin is not confounded with lineage. Of 3,345 orthologous groups constructed, 3,278 were fitted and 618 differed in detectable prevalence after correction for genome completeness. Two label permutations returned zero of 3,278. Carbohydrate-active enzyme families were tested independently on the same genomes, with 22 of 196 testable families differing and both permutations returning zero.
 
 | File | Purpose |
 |---|---|
@@ -184,6 +177,8 @@ loses their boundaries. Cluster counts are then examined against assembly
 contiguity within each arm before any between-arm statement is made, and product
 class composition is compared only for classes whose proportion does not track
 contiguity within arms.
+
+**Main result.** Total antiSMASH region recovery is similar across the five Ruminococcaceae genome sets, whereas recovery of complete clusters depends on assembly contiguity. Complete-region counts track contig N50 within every arm (Spearman rho 0.54 to 0.73) while total-region counts do not (rho 0.01 to 0.25), and at matched N50 of 40 to 80 kb the wild amphibian, EHI newt and GTDB arms give 0.67, 0.65 and 0.68 complete regions per genome. After the fragmentation gate, RRE-containing clusters are the only retained class showing the same direction in both amphibian arms. These comparisons are descriptive and do not establish biosynthetic novelty.
 
 | File | Purpose |
 |---|---|
