@@ -26,9 +26,9 @@ one parsing pipeline for both, so that the two are comparable.
 |---|---|
 | `jobs/01_dereplicate_mags.sh` | Dereplication at 95% ANI |
 | `scripts/02_build_sgb_manifest.py` | SGB manifest from the dereplication tables |
-| `jobs/03_rrna_trna_catalog.sh` | barrnap and tRNAscan-SE, catalog arm |
-| `jobs/05_rrna_trna_references.sh` | barrnap and tRNAscan-SE, reference arm |
-| `scripts/06_parse_rrna_trna.py` | Feature parsing, both arms |
+| `jobs/03_rrna_trna_catalog.sh` | barrnap and tRNAscan-SE, catalog set |
+| `jobs/05_rrna_trna_references.sh` | barrnap and tRNAscan-SE, reference set |
+| `scripts/06_parse_rrna_trna.py` | Feature parsing, both sets |
 | `jobs/07_gunc_screen_representatives.sh` | Chimerism screening |
 | `scripts/08_stage_gunc_input.py` | Protein calls for the above |
 | `scripts/09_audit_gunc.py` | Chimerism summary |
@@ -59,11 +59,11 @@ directly rather than inferred from taxonomy.
 | `scripts/16_novelty_proportions.py` | Novelty proportions and per-genus expansion |
 | `scripts/17_sampling_effort_all_genera.py` | Expansion against GTDB species-cluster counts |
 | `scripts/18_genus_r220_to_r226_map.py` | Genus stability from r220 to r226 |
-| `scripts/19_stage_rum_drep.py` | Dereplication input set, first arm |
+| `scripts/19_stage_rum_drep.py` | Dereplication input, first set |
 | `scripts/20_stage_gtdb_refs_rum.py` | Dereplication input set, GTDB references |
-| `scripts/21_stage_amph_into_drep.py` | Dereplication input set, amphibian arms |
-| `jobs/22_pooled_drep_rum.sh` | Joint dereplication of five arms at 95% ANI |
-| `scripts/23_pooled_drep_multiarm_audit.py` | Cluster composition by arm |
+| `scripts/21_stage_amph_into_drep.py` | Dereplication input, amphibian sets |
+| `jobs/22_pooled_drep_rum.sh` | Joint dereplication of five sets at 95% ANI |
+| `scripts/23_pooled_drep_multiarm_audit.py` | Cluster composition by set |
 | `scripts/24_figure2_novelty.py` | Figure 2 and the genus-expansion permutation |
 | `scripts/25_make_step2_tables.py` | Supplementary tables S4 and S5 |
 
@@ -79,17 +79,17 @@ are partitioned into turnover and nestedness, tested for sensitivity to the
 evidence threshold, and checked against accumulation curves, since a genus
 missing from a small catalog may reflect sampling rather than absence.
 
-**Main result.** Ruminococcaceae genus composition in the wild catalog differs from the EHI comparison catalog by replacement rather than nested loss. Both arms hold 23 genera and share four, giving Sorensen dissimilarity 0.826 with no nestedness component. The independent EHI newt catalog is closer to the wild catalog than to the EHI arm, with all 14 EHI newt genera represented among the 23 wild genera. No arm has saturated, so absences in the smaller arms carry little weight.
+**Main result.** Ruminococcaceae genus composition in the wild catalog differs from the EHI comparison catalog by replacement rather than nested loss. Both sets hold 23 genera and share four, giving Sorensen dissimilarity 0.826 with no nestedness component. The independent EHI newt catalog is closer to the wild catalog than to the EHI set, with all 14 EHI newt genera represented among the 23 wild genera. No set has saturated, so absences in the smaller sets carry little weight.
 
 | File | Purpose |
 |---|---|
-| `scripts/26_stage_ehi_nonherptile.py` | EHI mammal arm staged |
+| `scripts/26_stage_ehi_nonherptile.py` | EHI mammal set staged |
 | `jobs/27_gtdbtk_ehi_r220.sh` | EHI classification, identify and align |
 | `jobs/28_gtdbtk_ehi_classify_resume.sh` | EHI classification, classify step |
-| `scripts/29_stage_ehi_amphibian.py` | EHI newt arm staged |
+| `scripts/29_stage_ehi_amphibian.py` | EHI newt set staged |
 | `jobs/30_gtdbtk_ehi_amphibian.sh` | EHI newt classification |
 | `jobs/31_gtdbtk_youngblut.sh` | Youngblut classification |
-| `scripts/32_pooled_drep_composition.py` | Clusters resolved to units per arm |
+| `scripts/32_pooled_drep_composition.py` | Clusters resolved to units per set |
 | `scripts/33_turnover_nestedness.py` | Turnover, nestedness, thresholds, accumulation |
 | `scripts/34_four_catalog_genus_table.py` | Genus recovery blocks and matched Jaccard |
 | `scripts/35_amphibian_genus_replication.py` | Recovery across the two amphibian catalogs |
@@ -127,7 +127,7 @@ built first and genera are tested for interleaving before any functional
 comparison. Within the two qualifying genera, protein clusters are merged into
 orthologous groups and carbohydrate-active enzyme families are annotated on an
 independent layer. Both are modelled against genome completeness, since the
-arms differ in it, and both are checked against label permutations. Per-protein
+sets differ in it, and both are checked against label permutations. Per-protein
 annotation rate is measured separately, because it sets the direction in which
 any remaining bias runs.
 
@@ -160,7 +160,7 @@ any remaining bias runs.
 | `scripts/66_extract_pfam_models.py` | Individual Pfam models extracted |
 | `jobs/67_annot_154.sh` | Pfam and KofamScan annotation |
 | `scripts/68_parse_annot_154.py` | Annotation parsed into presence matrices |
-| `scripts/69_annot_rate_by_arm.py` | Per-protein annotation rate compared between arms |
+| `scripts/69_annot_rate_by_arm.py` | Per-protein annotation rate compared between sets |
 | `scripts/84_figure_cazy_tree_heatmap.py` | CAZy family heatmap |
 | `scripts/85_make_step5_tables.py` | Supplementary tables S8 and S9 |
 
@@ -168,28 +168,28 @@ Output: `figures/Figure_gene_content.pdf`, `figures/Figure_cazy_tree_heatmap.pdf
 
 ### Step 6. Biosynthetic gene clusters
 
-Biosynthetic gene clusters are detected in all five arms and counted separately
+Biosynthetic gene clusters are detected in all five sets and counted separately
 as complete and as contig-edge, since a fragmented assembly splits clusters and
 loses their boundaries. Cluster counts are then examined against assembly
-contiguity within each arm before any between-arm statement is made, and product
+contiguity within each set before any between-set statement is made, and product
 class composition is compared only for classes whose proportion does not track
-contiguity within arms.
+contiguity within sets.
 
-**Main result.** Total antiSMASH region recovery is similar across the five Ruminococcaceae genome sets, whereas recovery of complete clusters depends on assembly contiguity. Complete-region counts track contig N50 within every arm (Spearman rho 0.54 to 0.73) while total-region counts do not (rho 0.01 to 0.25), and at matched N50 of 40 to 80 kb the wild amphibian, EHI newt and GTDB arms give 0.67, 0.65 and 0.68 complete regions per genome. After the fragmentation gate, RRE-containing clusters are the only retained class showing the same direction in both amphibian arms. These comparisons are descriptive and do not establish biosynthetic novelty.
+**Main result.** Total antiSMASH region recovery is similar across the five Ruminococcaceae genome sets, whereas recovery of complete clusters depends on assembly contiguity. Complete-region counts track contig N50 within every set (Spearman rho 0.54 to 0.73) while total-region counts do not (rho 0.01 to 0.25), and at matched N50 of 40 to 80 kb the wild amphibian, EHI newt and GTDB sets give 0.67, 0.65 and 0.68 complete regions per genome. After the fragmentation gate, RRE-containing clusters are the only retained class showing the same direction in both amphibian sets. These comparisons are descriptive and do not establish biosynthetic novelty.
 
 | File | Purpose |
 |---|---|
 | `scripts/70_stage_bgc_input.py` | Amphibian genomes staged |
-| `jobs/71_antismash_amphibian.sh` | antiSMASH, amphibian arm |
+| `jobs/71_antismash_amphibian.sh` | antiSMASH, amphibian set |
 | `scripts/72_parse_antismash_amphibian.py` | Amphibian output parsed |
 | `scripts/73_stage_bgc_refs.py` | Reference genomes staged |
-| `jobs/74_antismash_refs.sh` | antiSMASH, reference arm |
+| `jobs/74_antismash_refs.sh` | antiSMASH, reference set |
 | `scripts/75_parse_antismash_refs.py` | Reference output parsed |
 | `scripts/76_stage_bgc_endotherm.py` | Comparison genomes staged |
-| `jobs/77_antismash_endotherm.sh` | antiSMASH, comparison arms |
+| `jobs/77_antismash_endotherm.sh` | antiSMASH, comparison sets |
 | `scripts/78_parse_antismash_endotherm.py` | Comparison output parsed |
 | `scripts/79_assembly_quality_arms.py` | Contiguity measured from staged fastas |
-| `scripts/80_assembly_quality_all_arms.py` | Comparison arms added |
+| `scripts/80_assembly_quality_all_arms.py` | Comparison sets added |
 | `scripts/81_bgc_density_and_carriage.py` | Density per megabase and carriage |
 | `scripts/82_bgc_class_composition.py` | Class composition with the fragmentation gate |
 | `scripts/83_figure_bgc_contiguity.py` | Figure |
