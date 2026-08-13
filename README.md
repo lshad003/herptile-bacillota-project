@@ -4,8 +4,9 @@ This repository documents the analyses used to characterize Bacillota_A
 genomes recovered from reptile and amphibian gut metagenomes, determine how
 much of that diversity is represented in existing genome databases, compare
 Ruminococcaceae composition across independent genome catalogs, and examine
-whether gene content and biosynthetic features differ in lineages where host
-origin can be separated from phylogeny.
+gene-content differences both where host origin can be separated from
+bacterial lineage and where the two remain confounded, alongside
+biosynthetic feature comparisons.
 
 Each step below summarizes the analysis, its main result, the scripts used,
 and the resulting figures or supplementary tables.
@@ -170,7 +171,63 @@ any remaining bias runs.
 
 Output: `figures/Figure_gene_content.pdf`, `figures/Figure_cazy_tree_heatmap.pdf`, `tables/TableS8`, `tables/TableS9`
 
-### Step 6. Biosynthetic gene clusters
+Step 6. Gene content where host and lineage cannot be separated
+In Angelakisella, all 31 amphibian genomes (21 wild-catalog genomes and 10
+EHI newt genomes) form a single clade within the GTDB-defined genus,
+separate from 26 non-amphibian genomes. Host origin and bacterial lineage
+therefore cannot be separated in this genus. Rather than testing for a
+host-origin association, this analysis asks whether the replicated
+amphibian-associated lineage carries a distinct functional repertoire,
+described throughout as clade-associated. Because sequence-identity
+clustering can split divergent orthologs, apparent clade-specific MMseqs
+clusters were first audited by homology search against the reference
+proteomes, using clusters shared between groups as a positive control. Gene
+content was then represented by eggNOG orthologous groups and tested with
+the same completeness-aware framework and label-permutation controls used
+for the interleaved genera.
+
+Main result. Of 67 MMseqs protein clusters that were near-fixed in the
+amphibian clade and near-absent from the other Angelakisella genomes, 66
+had detectable reference homologs; their median best-hit identity was 56%,
+closely matching the measured mean amphibian-to-reference AAI of 55.8%
+(range 52.1 to 59.1% across 100 genome pairs). Across these genomes, MMseqs
+clustering produced 3.1-fold more units than ortholog-level representation,
+showing that much of the apparent clade-specific protein content reflected
+sequence divergence rather than gene gain or loss. After orthology
+correction and completeness-aware testing, 866 of 3,023 fitted orthologous
+groups differed between the amphibian clade and other Angelakisella genomes
+(504 amphibian-enriched and 362 reference-enriched), while both
+permuted-label controls produced zero significant groups. Eight orthologous
+groups were near-fixed in the amphibian clade and near-absent elsewhere,
+including an adjacent kdpAB potassium-transport locus and an FkbH-like
+family. Reference-enriched groups also showed coordinated differences in
+biosynthetic functions, including chorismate- and pyrimidine-synthesis
+genes.
+
+File	Purpose
+`scripts/91_angelakisella_matrices.py`	Neighborhood genome set and presence matrices in two currencies
+`scripts/92_stage_diamond_queries.py`	Cluster member proteins staged for homology search
+`jobs/93_angelakisella_diamond.sh`	Homology search against reference proteomes
+`scripts/94_classify_diamond_hits.py`	Clusters classified with shared-cluster positive control
+`scripts/95_nohit_family_members.py`	Membership of the family without reference homologs
+`jobs/96_nohit_family_tblastn.sh`	Absence closed by translated search against reference assemblies
+`scripts/97_nohit_family_hmmscan.sh`	Domain identification of the family
+`scripts/98_stage_emapper_gap.py`	Unannotated genomes staged
+`jobs/99_angelakisella_emapper.sh`	eggNOG annotation, first set
+`scripts/100_stage_emapper_gap2.py`	Additional genomes staged
+`jobs/101_angelakisella_emapper2.sh`	eggNOG annotation, second set
+`scripts/102_happi_metadata.py`	Completeness joined onto test genomes
+`scripts/103_run_happi_angelakisella.R`	Prevalence modelled against completeness
+`jobs/104_angelakisella_happi.sh`	Real fit and two permutations
+`scripts/105_block_privacy.py`	Private units per clade in both currencies
+`scripts/106_kdp_verify.py`	Kdp locus verified from annotations and adjacency
+`scripts/107_refenriched_check.py`	Reference-enriched groups annotated from member proteins
+`jobs/108_angelakisella_aai.sh`	Amphibian-to-reference AAI over 100 genome pairs
+`scripts/109_figure_angelakisella.py`	Neighborhood tree and two-currency heatmap
+Output: `figures/Figure_angelakisella_neighborhood_heatmap.pdf`
+
+
+### Step 7. Biosynthetic gene clusters
 
 Biosynthetic gene clusters are detected in all five sets and counted separately
 as complete and as contig-edge, since a fragmented assembly splits clusters and
