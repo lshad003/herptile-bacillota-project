@@ -75,8 +75,8 @@ Output: `figures/Figure2_novelty_expansion.pdf`, `figures/Figure_family_tree_red
 **
 ### Step 3. Genus composition against comparison catalogs
 
-Ruminococcaceae genome sets from the EHI and Youngblut catalogs and a second,
-independent amphibian catalog are classified against GTDB r220 on the same
+Ruminococcaceae genome sets from the EHI and Youngblut catalogs and a second
+amphibian catalog are classified against GTDB r220 on the same
 taxonomy, then resolved into one unit per catalog per dereplication cluster so
 that the four genus pools are counted in the same currency. Pool differences
 are partitioned into turnover and nestedness, tested for sensitivity to the
