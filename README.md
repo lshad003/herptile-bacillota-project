@@ -73,7 +73,6 @@ directly rather than inferred from taxonomy.
 
 Output: `figures/Figure2_novelty_expansion.pdf`, `figures/Figure_family_tree_red.pdf`, `tables/TableS4`, `tables/TableS5`
 
-**
 ### Step 3. Genus composition against comparison catalogs
 
 Ruminococcaceae genome sets from the EHI and Youngblut catalogs and a second
@@ -126,8 +125,8 @@ Output: `figures/Figure_reads_vs_genomes.pdf`, `tables/TableS7`
 
 ### Step 5. Gene content where host and lineage can be separated
 
-Gene content can be attributed to host origin only in genera where amphibian
-and reference genomes are phylogenetically interleaved, so a joint tree is
+Gene-content associations with host origin are interpretable only in genera
+where amphibian and reference genomes are phylogenetically interleaved, so a joint tree is
 built first and genera are tested for interleaving before any functional
 comparison. Within the two qualifying genera, protein clusters are merged into
 orthologous groups and carbohydrate-active enzyme families are annotated on an
@@ -190,7 +189,7 @@ for the interleaved genera.
 amphibian clade and near-absent from the other Angelakisella genomes, 66
 had detectable reference homologs; their median best-hit identity was 56%,
 closely matching the measured mean amphibian-to-reference AAI of 55.8%
-(range 52.1 to 59.1% across 100 genome pairs). Across these genomes, MMseqs
+(range 52.1 to 59.1% across 100 genome pairs). Across the 61-genome neighborhood, MMseqs
 clustering produced 3.1-fold more units than ortholog-level representation,
 showing that much of the apparent clade-specific protein content reflected
 sequence divergence rather than gene gain or loss. After orthology
@@ -225,6 +224,7 @@ genes.
 | `scripts/107_refenriched_check.py` | Reference-enriched groups annotated from member proteins |
 | `jobs/108_angelakisella_aai.sh` | Amphibian-to-reference AAI over 100 genome pairs |
 | `scripts/109_figure_angelakisella.py` | Neighborhood tree and two-currency heatmap |
+
 Output: `figures/Figure_angelakisella_neighborhood_heatmap.pdf`
 
 
@@ -255,7 +255,7 @@ contiguity within sets.
 | `scripts/81_bgc_density_and_carriage.py` | Density per megabase and carriage |
 | `scripts/82_bgc_class_composition.py` | Class composition with the fragmentation gate |
 | `scripts/83_figure_bgc_contiguity.py` | Figure |
-| `scripts/86_make_step6_table.py` | Supplementary table S10 |
+| `scripts/86_make_step7_table.py` | Supplementary table S10 |
 
 Output: `figures/Figure_bgc_contiguity.pdf`, `tables/TableS10`
 
