@@ -48,7 +48,7 @@ dereplicating the Ruminococcaceae representatives together with four comparison
 sets in a single run, so that any shared species cluster would be recovered
 directly rather than inferred from taxonomy.
 
-**Main result.** Of the 718 wild SGB representatives, 715 (99.6%) had no match to an existing GTDB r220 species cluster. Joint dereplication at 95% ANI with four external genome sets produced no cluster containing both a wild-catalog genome and a genome from any other set, while 57 clusters contained genomes from more than one external set, so cross-set clustering did occur in the same run. Within Ruminococcaceae, expansion was concentrated in particular genera: eight held at least twice as many wild SGBs as GTDB r220 species clusters, whereas no more than five genera reached that level in any of 9,999 permutations that redistributed the same SGBs in proportion to existing GTDB representation (p = 0.0001). The twofold threshold was chosen after inspecting the data, so this is exploratory. Novelty is also present above the species level: 215 of the 718 wild representatives (29.9%) received no GTDB genus assignment, including 25 of the 220 wild Ruminococcaceae. Across the wild and newt genomes classified in the same run, those without a genus assignment had a median relative evolutionary divergence of 0.846 against 0.926 for those with one, and 220 of 338 unassigned genomes fell below the 5th percentile of the assigned distribution, so these are deep placements rather than failed ones. No names are proposed, since the genomes placing deepest are also the least contiguous.
+**Main result.** Of the 718 wild SGB representatives, 715 (99.6%) had no match to an existing GTDB r220 species cluster. Joint dereplication at 95% ANI with four external genome sets produced no cluster containing both a wild-catalog genome and a genome from any other set, while 57 clusters contained genomes from more than one external set, so cross-set clustering did occur in the same run. Within Ruminococcaceae, expansion was concentrated in particular genera: eight held at least twice as many wild SGBs as GTDB r220 species clusters, whereas no more than five genera reached that level in any of 9,999 permutations that redistributed the same SGBs in proportion to existing GTDB representation (p = 0.0001). The twofold threshold was chosen after inspecting the data, so this is exploratory. Novelty also extended above species level: 215 of 718 wild representatives (29.9%), including 25 of the 220 wild Ruminococcaceae, had no GTDB genus assignment, and relative evolutionary divergence supported these as deeper phylogenetic placements rather than classification failures. No names are proposed, since the genomes placing deepest are also the least contiguous.
 
 | File | Purpose |
 |---|---|
@@ -67,8 +67,8 @@ directly rather than inferred from taxonomy.
 | `scripts/24_figure2_novelty.py` | Figure 2 and the genus-expansion permutation |
 | `scripts/25_make_step2_tables.py` | Supplementary tables S4 and S5 |
 | `scripts/88_unassigned_clade_coherence.py` | Genus-unassigned tips grouped into clades |
-| `scripts/90_figure_family_tree.py` | Family tree with divergence and assignment tracks |
 | `scripts/89_red_genus_check.py` | Relative evolutionary divergence of unassigned genomes |
+| `scripts/90_figure_family_tree.py` | Family tree with divergence and assignment tracks |
 
 Output: `figures/Figure2_novelty_expansion.pdf`, `figures/Figure_family_tree_red.pdf`, `tables/TableS4`, `tables/TableS5`
 
