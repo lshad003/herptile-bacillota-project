@@ -83,7 +83,7 @@ are partitioned into turnover and nestedness, tested for sensitivity to the
 evidence threshold, and checked against accumulation curves, since a genus
 missing from a small catalog may reflect sampling rather than absence.
 
-**Main result.** Ruminococcaceae genus composition in the wild catalog differs from the EHI comparison catalog by replacement rather than nested loss. Both sets hold 23 genera and share four, giving Sorensen dissimilarity 0.826 with no nestedness component. The independent EHI newt catalog is closer to the wild catalog than to the EHI set, with all 14 EHI newt genera represented among the 23 wild genera. No set has saturated, so absences in the smaller sets carry little weight.
+**Main result.** Ruminococcaceae genus composition in the wild catalog differs from the EHI comparison catalog by replacement rather than nested loss. Both sets hold 23 genera and share four, giving Sørensen dissimilarity 0.826 with no nestedness component. The EHI newt catalog, which samples different animals but shares the EHI pipeline, is closer to the wild catalog than to the EHI set, with all 14 EHI newt genera represented among the 23 wild genera. No set has saturated, so absences in the smaller catalogs should be interpreted cautiously.
 
 | File | Purpose |
 |---|---|
