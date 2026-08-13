@@ -171,7 +171,7 @@ any remaining bias runs.
 
 Output: `figures/Figure_gene_content.pdf`, `figures/Figure_cazy_tree_heatmap.pdf`, `tables/TableS8`, `tables/TableS9`
 
-Step 6. Gene content where host and lineage cannot be separated
+### Step 6. Gene content where host and lineage cannot be separated
 In Angelakisella, all 31 amphibian genomes (21 wild-catalog genomes and 10
 EHI newt genomes) form a single clade within the GTDB-defined genus,
 separate from 26 non-amphibian genomes. Host origin and bacterial lineage
