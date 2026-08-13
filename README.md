@@ -186,7 +186,7 @@ content was then represented by eggNOG orthologous groups and tested with
 the same completeness-aware framework and label-permutation controls used
 for the interleaved genera.
 
-Main result. Of 67 MMseqs protein clusters that were near-fixed in the
+**Main result.** Of 67 MMseqs protein clusters that were near-fixed in the
 amphibian clade and near-absent from the other Angelakisella genomes, 66
 had detectable reference homologs; their median best-hit identity was 56%,
 closely matching the measured mean amphibian-to-reference AAI of 55.8%
