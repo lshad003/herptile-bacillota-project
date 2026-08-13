@@ -72,8 +72,7 @@ directly rather than inferred from taxonomy.
 
 Output: `figures/Figure2_novelty_expansion.pdf`, `figures/Figure_family_tree_red.pdf`, `tables/TableS4`, `tables/TableS5`
 
-**Not yet in the draft.** Novelty above the species level was also measured but is not currently written up. Among the wild representatives, 215 of 718 (29.9%) received no GTDB genus assignment, including 25 of the 220 wild Ruminococcaceae. Across the wild and newt genomes classified in the same run, those without a genus assignment had a median relative evolutionary divergence of 0.846 against 0.926 for those with one, and 220 of 338 unassigned genomes fell below the 5th percentile of the assigned distribution, so they are deep placements rather than failed ones. No names are proposed: the genomes placing deepest are also the least contiguous, so the clades with the strongest novelty signal are the least able to support a formal proposal. Whether this belongs in the paper is open.
-
+**
 ### Step 3. Genus composition against comparison catalogs
 
 Ruminococcaceae genome sets from the EHI and Youngblut catalogs and a second,
