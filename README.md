@@ -204,26 +204,27 @@ family. Reference-enriched groups also showed coordinated differences in
 biosynthetic functions, including chorismate- and pyrimidine-synthesis
 genes.
 
-File	Purpose
-`scripts/91_angelakisella_matrices.py`	Neighborhood genome set and presence matrices in two currencies
-`scripts/92_stage_diamond_queries.py`	Cluster member proteins staged for homology search
-`jobs/93_angelakisella_diamond.sh`	Homology search against reference proteomes
-`scripts/94_classify_diamond_hits.py`	Clusters classified with shared-cluster positive control
-`scripts/95_nohit_family_members.py`	Membership of the family without reference homologs
-`jobs/96_nohit_family_tblastn.sh`	Absence closed by translated search against reference assemblies
-`scripts/97_nohit_family_hmmscan.sh`	Domain identification of the family
-`scripts/98_stage_emapper_gap.py`	Unannotated genomes staged
-`jobs/99_angelakisella_emapper.sh`	eggNOG annotation, first set
-`scripts/100_stage_emapper_gap2.py`	Additional genomes staged
-`jobs/101_angelakisella_emapper2.sh`	eggNOG annotation, second set
-`scripts/102_happi_metadata.py`	Completeness joined onto test genomes
-`scripts/103_run_happi_angelakisella.R`	Prevalence modelled against completeness
-`jobs/104_angelakisella_happi.sh`	Real fit and two permutations
-`scripts/105_block_privacy.py`	Private units per clade in both currencies
-`scripts/106_kdp_verify.py`	Kdp locus verified from annotations and adjacency
-`scripts/107_refenriched_check.py`	Reference-enriched groups annotated from member proteins
-`jobs/108_angelakisella_aai.sh`	Amphibian-to-reference AAI over 100 genome pairs
-`scripts/109_figure_angelakisella.py`	Neighborhood tree and two-currency heatmap
+| File | Purpose |
+| --- | --- |
+| `scripts/91_angelakisella_matrices.py` | Neighborhood genome set and presence matrices in two currencies |
+| `scripts/92_stage_diamond_queries.py` | Cluster member proteins staged for homology search |
+| `jobs/93_angelakisella_diamond.sh` | Homology search against reference proteomes |
+| `scripts/94_classify_diamond_hits.py` | Clusters classified with shared-cluster positive control |
+| `scripts/95_nohit_family_members.py` | Membership of the family without reference homologs |
+| `jobs/96_nohit_family_tblastn.sh` | Absence closed by translated search against reference assemblies |
+| `scripts/97_nohit_family_hmmscan.sh` | Domain identification of the family |
+| `scripts/98_stage_emapper_gap.py` | Unannotated genomes staged |
+| `jobs/99_angelakisella_emapper.sh` | eggNOG annotation, first set |
+| `scripts/100_stage_emapper_gap2.py` | Additional genomes staged |
+| `jobs/101_angelakisella_emapper2.sh` | eggNOG annotation, second set |
+| `scripts/102_happi_metadata.py` | Completeness joined onto test genomes |
+| `scripts/103_run_happi_angelakisella.R` | Prevalence modelled against completeness |
+| `jobs/104_angelakisella_happi.sh` | Real fit and two permutations |
+| `scripts/105_block_privacy.py` | Private units per clade in both currencies |
+| `scripts/106_kdp_verify.py` | Kdp locus verified from annotations and adjacency |
+| `scripts/107_refenriched_check.py` | Reference-enriched groups annotated from member proteins |
+| `jobs/108_angelakisella_aai.sh` | Amphibian-to-reference AAI over 100 genome pairs |
+| `scripts/109_figure_angelakisella.py` | Neighborhood tree and two-currency heatmap |
 Output: `figures/Figure_angelakisella_neighborhood_heatmap.pdf`
 
 
