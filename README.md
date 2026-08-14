@@ -275,3 +275,18 @@ barrnap 0.9, tRNAscan-SE 2.0.12, happi (R).
     tables/    supplementary tables
     config/    input lists and batch files
     docs/      extended notes
+
+## Manuscript figure map
+
+| Manuscript figure | File |
+| --- | --- |
+| Figure 1 | `figures/Figure1_catalog.pdf` |
+| Figure 2 | `figures/Figure2_novelty_expansion.pdf` |
+| Figure 3 | `figures/Figure3_cross_catalog_overlap.pdf` |
+| Figure 4 | `figures/Figure_reads_vs_genomes.pdf` |
+| Figure 5 | `figures/Figure_gene_content.pdf` |
+| Figure 6 | `figures/Figure_angelakisella_neighborhood_heatmap.pdf` |
+| Figure 7 | `figures/Figure_bgc_contiguity.pdf` |
+| Figure S1 | `figures/Figure_feature_length_ratio.pdf` |
+| Figure S2 | `figures/Figure_family_tree_red.pdf` |
+| Figure S3 | `figures/Figure_cazy_tree_heatmap.pdf` |
