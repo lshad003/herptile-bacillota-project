@@ -3,7 +3,7 @@
 This repository documents the analyses used to characterize Bacillota_A
 genomes recovered from reptile and amphibian gut metagenomes, determine how
 much of that diversity is represented in existing genome databases, compare
-Ruminococcaceae composition across independent genome catalogs, and examine
+Ruminococcaceae composition across separate genome catalogs, and examine
 gene-content differences both where host origin can be separated from
 bacterial lineage and where the two remain confounded, alongside
 biosynthetic feature comparisons.
@@ -70,6 +70,7 @@ directly rather than inferred from taxonomy.
 | `scripts/88_unassigned_clade_coherence.py` | Genus-unassigned tips grouped into clades |
 | `scripts/89_red_genus_check.py` | Relative evolutionary divergence of unassigned genomes |
 | `scripts/90_figure_family_tree.py` | Family tree with divergence and assignment tracks |
+| `scripts/111_verify_pooled_drep_overlap.py` | Pooled clusters checked for cross-set membership |
 
 Output: `figures/Figure2_novelty_expansion.pdf`, `figures/Figure_family_tree_red.pdf`, `tables/TableS4`, `tables/TableS5`
 
@@ -126,7 +127,8 @@ Output: `figures/Figure_reads_vs_genomes.pdf`, `tables/TableS7`
 ### Step 5. Gene content where host and lineage can be separated
 
 Gene-content associations with host origin are interpretable only in genera
-where amphibian and reference genomes are phylogenetically interleaved, so a joint tree is
+where amphibian and reference genomes are phylogenetically interleaved, so
+that host origin and lineage are not perfectly confounded, so a joint tree is
 built first and genera are tested for interleaving before any functional
 comparison. Within the two qualifying genera, protein clusters are merged into
 orthologous groups and carbohydrate-active enzyme families are annotated on an
@@ -135,7 +137,7 @@ sets differ in it, and both are checked against label permutations. Per-protein
 annotation rate is measured separately, because it sets the direction in which
 any remaining bias runs.
 
-**Main result.** Gene content comparisons were restricted to the two genera in which amphibian and reference genomes are phylogenetically interleaved, so that host origin is not confounded with lineage. Of 3,345 orthologous groups constructed, 3,278 were fitted and 618 differed in detectable prevalence after correction for genome completeness. Two label permutations returned zero of 3,278. Carbohydrate-active enzyme families were tested independently on the same genomes, with 22 of 196 testable families differing and both permutations returning zero.
+**Main result.** Gene content comparisons were restricted to the two genera in which amphibian and reference genomes are phylogenetically interleaved, so that host origin and lineage are not perfectly confounded. Of 3,345 orthologous groups constructed, 3,278 were fitted and 618 differed in detectable prevalence after correction for genome completeness. Two label permutations returned zero of 3,278. Carbohydrate-active enzyme families were tested independently on the same genomes, with 22 of 196 testable families differing and both permutations returning zero.
 
 | File | Purpose |
 |---|---|
@@ -189,7 +191,7 @@ for the interleaved genera.
 amphibian clade and near-absent from the other Angelakisella genomes, 66
 had detectable reference homologs; their median best-hit identity was 56%,
 closely matching the measured mean amphibian-to-reference AAI of 55.8%
-(range 52.1 to 59.1% across 100 genome pairs). Across the 61-genome neighborhood, MMseqs
+(range 52.1 to 59.1% across a 10 x 10 genome subset, 100 pairwise comparisons). Across the 61-genome neighborhood, MMseqs
 clustering produced 3.1-fold more units than ortholog-level representation,
 showing that much of the apparent clade-specific protein content reflected
 sequence divergence rather than gene gain or loss. After orthology
@@ -198,8 +200,9 @@ groups differed between the amphibian clade and other Angelakisella genomes
 (504 amphibian-enriched and 362 reference-enriched), while both
 permuted-label controls produced zero significant groups. Eight orthologous
 groups were near-fixed in the amphibian clade and near-absent elsewhere,
-including an adjacent kdpAB potassium-transport locus and an FkbH-like
-family. Reference-enriched groups also showed coordinated differences in
+including an adjacent kdpAB potassium-transport locus, which also occurs
+in 2 of the 26 non-amphibian genomes, and an FkbH-like family, which occurs
+in none of them. Reference-enriched groups also showed coordinated differences in
 biosynthetic functions, including chorismate- and pyrimidine-synthesis
 genes.
 
@@ -224,6 +227,7 @@ genes.
 | `scripts/107_refenriched_check.py` | Reference-enriched groups annotated from member proteins |
 | `jobs/108_angelakisella_aai.sh` | Amphibian-to-reference AAI over 100 genome pairs |
 | `scripts/109_figure_angelakisella.py` | Neighborhood tree and two-currency heatmap |
+| `scripts/110_aro_hmm_check.sh` | Chorismate-pathway absence verified by profile HMM |
 
 Output: `figures/Figure_angelakisella_neighborhood_heatmap.pdf`
 
@@ -283,10 +287,10 @@ barrnap 0.9, tRNAscan-SE 2.0.12, happi (R).
 | Figure 1 | `figures/Figure1_catalog.pdf` |
 | Figure 2 | `figures/Figure2_novelty_expansion.pdf` |
 | Figure 3 | `figures/Figure3_cross_catalog_overlap.pdf` |
-| Figure 4 | `figures/Figure_reads_vs_genomes.pdf` |
+| Figure 4 | `figures/Figure_feature_length_ratio.pdf` |
 | Figure 5 | `figures/Figure_gene_content.pdf` |
 | Figure 6 | `figures/Figure_angelakisella_neighborhood_heatmap.pdf` |
 | Figure 7 | `figures/Figure_bgc_contiguity.pdf` |
-| Figure S1 | `figures/Figure_feature_length_ratio.pdf` |
+| Figure S1 | `figures/Figure_reads_vs_genomes.pdf` |
 | Figure S2 | `figures/Figure_family_tree_red.pdf` |
 | Figure S3 | `figures/Figure_cazy_tree_heatmap.pdf` |
